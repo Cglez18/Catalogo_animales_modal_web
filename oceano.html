@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Océano | ZooMundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+        <div class="logo">ZooMundo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/oceano.avif');">
+        <div class="header-content">
+            <h1>Mundo Marino</h1>
+            <p>Sumérgete en las profundidades y descubre a los gigantes y genios del océano.</p>
+        </div>
+    </header>
+
+    <main class="container section-habitats">
+        
+        <div class="animal-grid">
+            
+            <div class="animal-card" onclick="openModal(
+                'Delfín Nariz de Botella', 
+                'Famosos por su gran inteligencia y sociabilidad. Usan la ecolocalización (sonido) para ver bajo el agua y comunicarse con su manada.',
+                'Carnívoro', 'Mamífero', '150 - 650 kg', '2.0 - 4.0 m (Largo)', 'No',
+                'img/delfin.avif'
+            )">
+                <img src="img/delfin.avif" alt="Delfín">
+                <div class="animal-info">
+                    <h3>Delfín</h3>
+                    <p>El genio del mar</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Orca', 
+                'Aunque la llaman ballena asesina, en realidad es el delfín más grande. Son depredadores alfa y cazan en grupos coordinados con estrategias complejas.',
+                'Carnívoro', 'Mamífero', '3,000 - 6,000 kg', '6.0 - 8.0 m (Largo)', 'Datos Insuficientes',
+                'img/orca.avif'
+            )">
+                <img src="img/orca.avif" alt="Orca">
+                <div class="animal-info">
+                    <h3>Orca</h3>
+                    <p>El depredador supremo</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Ballena Azul', 
+                'El animal más grande que ha existido jamás. Su corazón es del tamaño de un coche pequeño y su lengua pesa tanto como un elefante.',
+                'Carnívoro (Planctófago)', 'Mamífero', 'Hasta 150,000 kg', '24 - 30 m (Largo)', 'En Peligro',
+                'img/ballena.avif'
+            )">
+                <img src="img/ballena.avif" alt="Ballena Azul">
+                <div class="animal-info">
+                    <h3>Ballena Azul</h3>
+                    <p>El gigante gentil</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Tiburón Blanco', 
+                'Tiene un sentido del olfato increíble que detecta una gota de sangre a kilómetros. Su esqueleto no es de hueso, sino de cartílago.',
+                'Carnívoro', 'Pez Cartilaginoso', '600 - 2,000 kg', '4.5 - 6.0 m (Largo)', 'Vulnerable',
+                'img/tiburon.avif'
+            )">
+                <img src="img/tiburon.avif" alt="Tiburón Blanco">
+                <div class="animal-info">
+                    <h3>Tiburón Blanco</h3>
+                    <p>El rey de los mares</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Pulpo', 
+                'Tiene tres corazones y sangre azul. Es el maestro del camuflaje, capaz de cambiar de color y textura en segundos para desaparecer.',
+                'Carnívoro', 'Molusco (Cefalópodo)', '3 - 10 kg', '60 - 90 cm (Largo)', 'No',
+                'img/pulpo.avif'
+            )">
+                <img src="img/pulpo.avif" alt="Pulpo">
+                <div class="animal-info">
+                    <h3>Pulpo</h3>
+                    <p>El alienígena marino</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Mantarraya Gigante', 
+                'A diferencia de otras rayas, no tiene aguijón venenoso. Vuela a través del agua con elegancia filtrando plancton con su enorme boca.',
+                'Planctófago', 'Pez Cartilaginoso', 'Hasta 1,350 kg', 'Hasta 7 m (Envergadura)', 'Vulnerable',
+                'img/mantarraya.avif'
+            )">
+                <img src="img/manta.avif" alt="Mantarraya">
+                <div class="animal-info">
+                    <h3>Mantarraya</h3>
+                    <p>La bailarina del océano</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 ZooMundo - Sección Océano</p>
+        </div>
+    </footer>
+
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-img-container">
+                <img id="m-imagen" src="" alt="Animal">
+            </div>
+            
+            <div class="modal-info-container">
+                <h2 id="m-nombre">Nombre Animal</h2>
+                <p id="m-desc" class="modal-description">Descripción...</p> 
+                
+                <div class="info-grid">
+                    <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
+                    <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
+                    <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
+                    <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro de Extinción</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
