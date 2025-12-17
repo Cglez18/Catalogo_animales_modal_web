@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabana | ZooMundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        @media (min-width: 768px) {
+            .animal-grid {
+                /* Fuerza exactamente 2 columnas del mismo tamaño */
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            .animal-card img {
+                /* Hacemos la imagen un poco más alta para aprovechar el espacio ancho */
+                height: 300px; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+        <div class="logo">ZooMundo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/sabana.avif');">
+        <div class="header-content">
+            <h1>La Sabana</h1>
+            <p>El reino de los grandes mamíferos y las migraciones épicas.</p>
+        </div>
+    </header>
+
+    <main class="container section-habitats">
+        
+        <div class="animal-grid">
+            
+            <div class="animal-card" onclick="openModal(
+                'León', 
+                'Conocido como el Rey de la Selva, aunque vive en la sabana. Es el único felino verdaderamente social que vive en manadas.',
+                'Carnívoro', 'Mamífero', '190 kg', '1.2 m (Alto)', 'Vulnerable',
+                'img/leon.avif'
+            )">
+                <img src="img/leon.avif" alt="León">
+                <div class="animal-info">
+                    <h3>León</h3>
+                    <p>El superdepredador</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Elefante Africano', 
+                'El animal terrestre más grande del mundo. Sus grandes orejas le ayudan a irradiar el exceso de calor.',
+                'Herbívoro', 'Mamífero', '6,000 kg', '3.3 m (Alto)', 'En Peligro',
+                'img/elefante.avif'
+            )">
+                <img src="img/elefante.avif" alt="Elefante Africano">
+                <div class="animal-info">
+                    <h3>Elefante Africano</h3>
+                    <p>El gigante gentil</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Jirafa', 
+                'El animal más alto del mundo. Su lengua de 50 cm es prensil y le permite comer hojas de acacias con espinas.',
+                'Herbívoro', 'Mamífero', '1,200 kg', '5.5 m (Alto)', 'Vulnerable',
+                'img/jirafa.avif'
+            )">
+                <img src="img/jirafa.avif" alt="Jirafa">
+                <div class="animal-info">
+                    <h3>Jirafa</h3>
+                    <p>La torre de la sabana</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Rinoceronte', 
+                'Famoso por sus cuernos de queratina. A pesar de su peso, puede correr sorprendentemente rápido y cambiar de dirección.',
+                'Herbívoro', 'Mamífero', '2,300 kg', '1.8 m (Alto)', 'En Peligro Crítico',
+                'img/rinoceronte.avif'
+            )">
+                <img src="img/rinoceronte.avif" alt="Rinoceronte">
+                <div class="animal-info">
+                    <h3>Rinoceronte</h3>
+                    <p>El tanque blindado</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Guepardo', 
+                'El animal terrestre más rápido, alcanzando 110 km/h en segundos. No puede rugir, pero ronronea como un gato.',
+                'Carnívoro', 'Mamífero', '50 kg', '90 cm (Alto)', 'Vulnerable',
+                'img/guepardo.avif'
+            )">
+                <img src="img/guepardo.avif" alt="Guepardo">
+                <div class="animal-info">
+                    <h3>Guepardo</h3>
+                    <p>Velocidad pura</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Avestruz', 
+                'El ave más grande y pesada. No vuela, pero corre a 70 km/h y sus patadas son defensas mortales.',
+                'Omnívoro', 'Ave', '110 kg', '2.8 m (Alto)', 'No',
+                'img/avestruz.avif'
+            )">
+                <img src="img/avestruz.avif" alt="Avestruz">
+                <div class="animal-info">
+                    <h3>Avestruz</h3>
+                    <p>El corredor emplumado</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Cocodrilo del Nilo', 
+                'Un depredador prehistórico que acecha en los abrevaderos. Tiene la mordida más fuerte del reino animal.',
+                'Carnívoro', 'Reptil', '700 kg', '4.2 m (Largo)', 'No',
+                'img/cocodrilo.avif'
+            )">
+                <img src="img/cocodrilo.avif" alt="Cocodrilo del Nilo">
+                <div class="animal-info">
+                    <h3>Cocodrilo del Nilo</h3>
+                    <p>El terror del río</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Cebra', 
+                'Sus rayas son únicas como una huella dactilar. Viajan miles de kilómetros en la gran migración anual.',
+                'Herbívoro', 'Mamífero', '300 kg', '1.4 m (Alto)', 'Casi Amenazado',
+                'img/cebra.avif'
+            )">
+                <img src="img/cebra.avif" alt="Cebra">
+                <div class="animal-info">
+                    <h3>Cebra</h3>
+                    <p>Rayas en movimiento</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 ZooMundo - Sección Sabana</p>
+        </div>
+    </footer>
+
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-img-container">
+                <img id="m-imagen" src="" alt="Animal">
+            </div>
+            
+            <div class="modal-info-container">
+                <h2 id="m-nombre">Nombre Animal</h2>
+                <p id="m-desc" class="modal-description">Descripción...</p> 
+                
+                <div class="info-grid">
+                    <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
+                    <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
+                    <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
+                    <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                </div>
+
+                <div id="m-peligro" class="danger-status">⚠️ En Peligro de Extinción</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

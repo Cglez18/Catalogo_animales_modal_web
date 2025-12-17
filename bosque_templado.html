@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosque Templado | ZooMundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+        <div class="logo">ZooMundo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bosque.avif');">
+        <div class="header-content">
+            <h1>Bosque Templado</h1>
+            <p>Un mundo de estaciones marcadas, donde la vida se adapta al cambio constante entre el verano verde y el invierno blanco.</p>
+        </div>
+    </header>
+
+    <main class="container section-habitats">
+        
+        <div class="animal-grid">
+            
+            <div class="animal-card" onclick="openModal(
+                'Oso Pardo / Grizzly', 
+                'El gigante del bosque. Pasa el otoño comiendo para acumular grasa y sobrevivir su hibernación invernal.',
+                'Omnívoro', 'Mamífero', '130 - 600 kg', '2.5 m (Erguido)', 'No',
+                'img/oso.avif'
+            )">
+                <img src="img/oso_pardo.avif" alt="Oso Pardo">
+                <div class="animal-info">
+                    <h3>Oso Pardo</h3>
+                    <p>El rey del bosque</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Lobo Gris', 
+                'Depredador social por excelencia. Viven en manadas organizadas jerárquicamente y se comunican mediante aullidos complejos.',
+                'Carnívoro', 'Mamífero', '30 - 50 kg', '1.5 m (Largo)', 'No',
+                'img/lobo.avif'
+            )">
+                <img src="img/lobo_gris.avif" alt="Lobo Gris">
+                <div class="animal-info">
+                    <h3>Lobo Gris</h3>
+                    <p>El espíritu de la manada</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Ciervo / Venado', 
+                'Ágil y cauteloso. Los machos desarrollan grandes astas que se caen y renuevan cada año para la temporada de apareamiento.',
+                'Herbívoro', 'Mamífero', '60 - 200 kg', '1.2 m (Alto)', 'No',
+                'img/ciervo.avif'
+            )">
+                <img src="img/venado.avif" alt="Ciervo">
+                <div class="animal-info">
+                    <h3>Ciervo</h3>
+                    <p>Nobleza y agilidad</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Águila Real', 
+                'Una de las aves de presa más poderosas. Su visión es 8 veces más aguda que la humana, permitiéndole ver presas a kilómetros.',
+                'Carnívoro', 'Ave', '4 - 6 kg', '2.2 m (Envergadura)', 'No',
+                'img/aguila.avif'
+            )">
+                <img src="img/aguila.avif" alt="Águila Real">
+                <div class="animal-info">
+                    <h3>Águila Real</h3>
+                    <p>La reina de los cielos</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Zorro Rojo', 
+                'Cazador solitario y oportunista. Es extremadamente adaptable y usa su gran cola para mantener el equilibrio y abrigarse.',
+                'Omnívoro', 'Mamífero', '5 - 7 kg', '60 - 90 cm (Largo)', 'No',
+                'img/zorro.avif'
+            )">
+                <img src="img/zorro.avif" alt="Zorro Rojo">
+                <div class="animal-info">
+                    <h3>Zorro Rojo</h3>
+                    <p>Astucia y sigilo</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Mapache', 
+                'Conocido por su antifaz negro y sus patas delanteras muy sensibles que usa para manipular alimentos y abrir objetos.',
+                'Omnívoro', 'Mamífero', '5 - 9 kg', '60 cm (Largo)', 'No',
+                'img/mapache.avif'
+            )">
+                <img src="img/mapache.avif" alt="Mapache">
+                <div class="animal-info">
+                    <h3>Mapache</h3>
+                    <p>El bandido del bosque</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 ZooMundo - Sección Bosque Templado</p>
+        </div>
+    </footer>
+
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-img-container">
+                <img id="m-imagen" src="" alt="Animal">
+            </div>
+            
+            <div class="modal-info-container">
+                <h2 id="m-nombre">Nombre Animal</h2>
+                <p id="m-desc" class="modal-description">Descripción...</p> 
+                
+                <div class="info-grid">
+                    <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
+                    <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
+                    <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
+                    <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                </div>
+
+                <div id="m-peligro" class="danger-status">⚠️ En Peligro de Extinción</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

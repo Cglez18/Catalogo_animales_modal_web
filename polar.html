@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Región Polar | ZooMundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+        <div class="logo">ZooMundo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/fondo_polar.avif');">
+        <div class="header-content">
+            <h1>El Ártico y la Tundra</h1>
+            <p>Un reino de hielo eterno donde solo los más fuertes sobreviven al frío extremo.</p>
+        </div>
+    </header>
+
+    <main class="container section-habitats">
+        
+        <div class="animal-grid">
+            
+            <div class="animal-card" onclick="openModal(
+                'Oso Polar', 
+                'Es el carnívoro terrestre más grande de la Tierra. Aunque su pelaje parece blanco, es transparente y su piel es negra para absorber el calor del sol.',
+                'Carnívoro', 'Mamífero', '350 - 700 kg', '2.4 - 3.0 m (Largo)', 'Vulnerable',
+                'img/oso_polar.avif'
+            )">
+                <img src="img/oso_polar.avif" alt="Oso Polar">
+                <div class="animal-info">
+                    <h3>Oso Polar</h3>
+                    <p>El rey del hielo</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Zorro Ártico', 
+                'Su pelaje cambia de color con las estaciones: blanco en invierno para camuflarse en la nieve y marrón en verano. Resiste temperaturas de hasta -50°C.',
+                'Omnívoro', 'Mamífero', '3 - 8 kg', '46 - 68 cm (Largo)', 'No',
+                'img/zorro_artico.avif'
+            )">
+                <img src="img/zorro_artico.avif" alt="Zorro Ártico">
+                <div class="animal-info">
+                    <h3>Zorro Ártico</h3>
+                    <p>El camuflaje viviente</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Leopardo de las Nieves', 
+                'Conocido como el fantasma de las montañas. Usa su larga y gruesa cola para mantener el equilibrio en los riscos y para cubrirse la nariz del frío al dormir.',
+                'Carnívoro', 'Mamífero', '22 - 55 kg', '1.0 - 1.3 m (Largo)', 'Vulnerable',
+                'img/leopardo_nieves.avif'
+            )">
+                <img src="img/leopardo_nieves.avif" alt="Leopardo de las Nieves">
+                <div class="animal-info">
+                    <h3>Leopardo de las Nieves</h3>
+                    <p>El fantasma de la montaña</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Buey Almizclero', 
+                'Sobreviviente de la Era de Hielo. Su pelaje interno, llamado qiviut, es 8 veces más cálido que la lana de oveja. Forman círculos defensivos para proteger a las crías.',
+                'Herbívoro', 'Mamífero', '180 - 400 kg', '1.1 - 1.5 m (Alto)', 'No',
+                'img/buey_almizclero.avif'
+            )">
+                <img src="img/buey.avif" alt="Buey Almizclero">
+                <div class="animal-info">
+                    <h3>Buey Almizclero</h3>
+                    <p>La fortaleza peluda</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Foca de Groenlandia', 
+                'Pasan gran parte de su vida en el mar. Tienen una gruesa capa de grasa bajo la piel que les permite mantener su temperatura corporal en aguas heladas.',
+                'Carnívoro', 'Mamífero', '130 kg (Promedio)', '1.7 m (Largo)', 'No',
+                'img/foca.avif'
+            )">
+                <img src="img/foca.avif" alt="Foca">
+                <div class="animal-info">
+                    <h3>Foca</h3>
+                    <p>Ágil nadadora polar</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Morsa', 
+                'Reconocibles por sus largos colmillos que usan para salir del agua y romper el hielo. Su piel puede tener hasta 4 cm de grosor.',
+                'Carnívoro', 'Mamífero', '800 - 1700 kg', '2.7 - 3.6 m (Largo)', 'Vulnerable',
+                'img/morsa.avif'
+            )">
+                <img src="img/morsa.avif" alt="Morsa">
+                <div class="animal-info">
+                    <h3>Morsa</h3>
+                    <p>El gigante de colmillos</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 ZooMundo - Sección Polar</p>
+        </div>
+    </footer>
+
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-img-container">
+                <img id="m-imagen" src="" alt="Animal">
+            </div>
+            
+            <div class="modal-info-container">
+                <h2 id="m-nombre">Nombre Animal</h2>
+                <p id="m-desc" class="modal-description">Descripción corta aquí...</p> 
+                
+                <div class="info-grid">
+                    <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
+                    <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
+                    <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
+                    <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro de Extinción</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

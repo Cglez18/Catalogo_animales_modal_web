@@ -1,0 +1,397 @@
+:root {
+    --bg-dark: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #f0f0f0;
+    --text-muted: #a0a0a0;
+    --accent: #d4af37; /* Dorado elegante */
+    --accent-hover: #f9d666;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- NAVEGACIÓN --- */
+.navbar {
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 1px;
+}
+
+.nav-links li { display: inline-block; margin-left: 30px; }
+.nav-links a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--accent); }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    width: 100%;
+    /* Imagen de fondo oscura y elegante */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efecto Parallax */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content { max-width: 800px; padding: 20px; animation: fadeInUp 1s ease-out; }
+
+.subtitle {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.btn-explore {
+    padding: 15px 40px;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-explore:hover {
+    background-color: var(--accent);
+    color: #000;
+}
+
+/* --- SECCIÓN HÁBITATS --- */
+.section-habitats { padding: 100px 20px; }
+
+.container { max-width: 1200px; margin: 0 auto; }
+
+.section-header { text-align: center; margin-bottom: 60px; }
+.section-header h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.divider {
+    width: 60px; height: 3px;
+    background-color: var(--accent);
+    margin: 0 auto 20px;
+}
+.section-header p { color: var(--text-muted); }
+
+/* GRID ELEGANTE */
+.biome-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.biome-card {
+    background-color: var(--card-bg);
+    border-radius: 4px; /* Bordes sutiles */
+    overflow: hidden;
+    position: relative;
+    display: block;
+    transition: transform 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.biome-card:hover { transform: translateY(-10px); }
+
+
+.card-image {
+    height: 300px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.biome-card:hover .card-image img { transform: scale(1.1); }
+
+.card-content {
+    padding: 25px;
+    text-align: left;
+    position: relative;
+}
+
+.card-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.link-text {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+/* --- FOOTER --- */
+footer {
+    border-top: 1px solid #333;
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+.brand {
+    font-family: var(--font-heading);
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.copy { font-size: 0.8rem; margin-top: 20px; opacity: 0.6; }
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividad extra */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+    .wide { grid-column: span 1; }
+}
+/* --- ESTILOS ESPECÍFICOS DE PÁGINAS INTERNAS --- */
+
+/* Header más pequeño para las sub-páginas */
+.biome-header {
+    height: 40vh; /* Menos altura que la portada principal */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+}
+
+.header-content h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--white);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+}
+
+/* Ajustes de la cuadrícula de animales */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding-bottom: 50px;
+}
+
+.animal-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.animal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--accent);
+}
+
+.animal-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.animal-info h3 {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+.animal-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Estilos para la descripción dentro del Modal */
+.modal-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555; /* Texto oscuro para leer bien sobre fondo blanco */
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-style: italic;
+}
+
+.info-grid {
+    display: grid;
+    gap: 10px;
+}
+
+/* Ajuste del Modal para que el texto sea legible en modo oscuro/claro */
+.modal-content {
+    background-color: #ffffff; /* El modal lo mantenemos blanco para limpieza */
+}
+.data-label { color: #222; }
+.data-row { color: #444; }
+.modal-content h2 { color: #111; }
+/* --- CORRECCIÓN DEL MODAL (VENTANA EMERGENTE) --- */
+
+.modal {
+    display: none; /* Oculto por defecto. JS lo cambia a 'flex' al hacer clic */
+    position: fixed; /* Se queda fijo en la pantalla aunque hagas scroll */
+    z-index: 2000; /* Se asegura de estar ENCIMA de todo lo demás */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.85); /* Fondo negro semitransparente */
+    
+    /* Centrado del contenido */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #fff; /* Fondo blanco para la tarjeta */
+    border-radius: 15px;
+    width: 100%;
+    max-width: 900px;
+    display: flex; /* Para poner imagen a la izquierda y texto a la derecha */
+    flex-direction: column; /* En celular, uno debajo del otro */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    animation: aparecer 0.3s ease-out;
+}
+
+/* En pantallas grandes (PC/Laptop), poner imagen al lado del texto */
+@media (min-width: 768px) {
+    .modal-content {
+        flex-direction: row;
+        height: auto;
+        max-height: 80vh; /* Para que no sea más alto que la pantalla */
+    }
+    .modal-img-container {
+        width: 45%;
+        height: auto;
+    }
+    .modal-info-container {
+        width: 55%;
+        overflow-y: auto; /* Si el texto es muy largo, permite scroll interno */
+    }
+}
+
+.modal-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* La imagen cubre todo el espacio sin deformarse */
+}
+
+.modal-info-container {
+    padding: 40px;
+    color: #333;
+    text-align: left;
+}
+
+/* Botón de cerrar (X) */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: #333;
+    background: rgba(255,255,255,0.8);
+    width: 40px;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.close:hover {
+    background: #d4af37; /* Color dorado al pasar el mouse */
+    color: white;
+}
+
+/* Animación suave al abrir */
+@keyframes aparecer {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}

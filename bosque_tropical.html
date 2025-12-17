@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selva Tropical | ZooMundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+        <div class="logo">ZooMundo</div>
+        <ul class="nav-links">
+            <li><a href="index.html">← Volver al Inicio</a></li>
+        </ul>
+    </nav>
+
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/selva.avif');">
+        <div class="header-content">
+            <h1>Selva Tropical</h1>
+            <p>El pulmón del planeta, hogar de la mayor biodiversidad y colores vibrantes.</p>
+        </div>
+    </header>
+
+    <main class="container section-habitats">
+        
+        <div class="animal-grid">
+            
+            <div class="animal-card" onclick="openModal(
+                'Jaguar', 
+                'El gran felino de América. Excelente nadador y cazador sigiloso. Su mordida es considerada la más fuerte de todos los felinos.',
+                'Carnívoro', 'Mamífero', '90 kg', '1.7 m (Largo)', 'Casi Amenazado',
+                'img/jaguar.avif'
+            )">
+                <img src="img/jaguar.avif" alt="Jaguar">
+                <div class="animal-info">
+                    <h3>Jaguar</h3>
+                    <p>El fantasma de la selva</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Gorila', 
+                'El primate más grande del mundo. Viven en grupos familiares pacíficos liderados por un macho espalda plateada.',
+                'Herbívoro', 'Mamífero', '180 kg', '1.7 m (Alto)', 'En Peligro Crítico',
+                'img/gorila.avif'
+            )">
+                <img src="img/gorila.avif" alt="Gorila">
+                <div class="animal-info">
+                    <h3>Gorila</h3>
+                    <p>El gigante noble</p>
+                </div>
+            </div>
+
+            
+
+            <div class="animal-card" onclick="openModal(
+                'Anaconda Verde', 
+                'La serpiente más pesada del mundo. Es una constrictora acuática que acecha pacientemente en los ríos amazónicos.',
+                'Carnívoro', 'Reptil', '200 kg', '5.0 m (Largo)', 'No',
+                'img/anaconda.avif'
+            )">
+                <img src="img/anaconda.avif" alt="Anaconda">
+                <div class="animal-info">
+                    <h3>Anaconda</h3>
+                    <p>La reina del río</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Chimpancé', 
+                'Nuestros parientes vivos más cercanos. Usan herramientas complejas y tienen una vida social muy rica y jerárquica.',
+                'Omnívoro', 'Mamífero', '50 kg', '1.2 m (Alto)', 'En Peligro',
+                'img/chimpance.avif'
+            )">
+                <img src="img/chimpance.avif" alt="Chimpancé">
+                <div class="animal-info">
+                    <h3>Chimpancé</h3>
+                    <p>Inteligencia social</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Orangután', 
+                'Es el único gran simio de Asia, conocido por su pelaje rojizo y vida arborícola solitaria.',
+                'Frugívoro', 'Mamífero', '75 kg', '1.4 m (Alto)', 'En Peligro Crítico',
+                'img/orangutan.avif'
+            )">
+                <img src="img/orangutan.avif" alt="Orangután">
+                <div class="animal-info">
+                    <h3>Orangután</h3>
+                    <p>El sabio del bosque</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Tigre de Bengala', 
+                'El felino más grande del mundo. Sus rayas únicas le sirven de camuflaje entre la vegetación densa para emboscar presas.',
+                'Carnívoro', 'Mamífero', '220 kg', '3.0 m (Largo)', 'En Peligro',
+                'img/tigre.avif'
+            )">
+                <img src="img/tigre.avif" alt="Tigre de Bengala">
+                <div class="animal-info">
+                    <h3>Tigre de Bengala</h3>
+                    <p>El depredador rayado</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 ZooMundo - Sección Selva</p>
+        </div>
+    </footer>
+
+    <div id="animalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-img-container">
+                <img id="m-imagen" src="" alt="Animal">
+            </div>
+            
+            <div class="modal-info-container">
+                <h2 id="m-nombre">Nombre Animal</h2>
+                <p id="m-desc" class="modal-description">Descripción...</p> 
+                
+                <div class="info-grid">
+                    <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
+                    <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
+                    <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
+                    <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                </div>
+
+                <div id="m-peligro" class="danger-status">⚠️ En Peligro de Extinción</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

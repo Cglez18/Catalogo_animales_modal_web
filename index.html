@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZooMundo | La Naturaleza te Espera</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">ZooMundo</div>
+        <ul class="nav-links">
+            <li><a href="#habitats">Hábitats</a></li>
+            <li><a href="#about">Nosotros</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="subtitle">Bienvenido a la vida salvaje</span>
+            <h1>Explora la Belleza <br> del Mundo Natural</h1>
+            <p>Un recorrido visual por los ecosistemas más impresionantes del planeta.</p>
+            <a href="#habitats" class="btn-explore">Comenzar Aventura</a>
+        </div>
+    </header>
+
+    <section id="habitats" class="section-habitats">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Ecosistemas</h2>
+                <div class="divider"></div>
+                <p>Selecciona una región para descubrir sus habitantes.</p>
+            </div>
+
+            <div class="biome-grid">
+                
+                <a href="desierto.html" class="biome-card">
+                    <div class="card-image">
+                        <img src="img/desierto.avif" alt="Desierto">
+                    </div>
+                    <div class="card-content">
+                        <h3>Desierto</h3>
+                        <p>Resistencia y calor extremo</p>
+                        <span class="link-text">Ver animales &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="sabana.html" class="biome-card">
+                    <div class="card-image">
+                        <img src="img/sabana.avif" alt="Sabana">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sabana</h3>
+                        <p>El reino de los grandes mamíferos</p>
+                        <span class="link-text">Ver animales &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="bosque_tropical.html" class="biome-card">
+                    <div class="card-image">
+                        <img src="img/selva.avif" alt="Bosque Tropical">
+                    </div>
+                    <div class="card-content">
+                        <h3>Selva Tropical</h3>
+                        <p>El pulmón verde del planeta</p>
+                        <span class="link-text">Ver animales &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="bosque_templado.html" class="biome-card">
+                    <div class="card-image">
+                        <img src="img/bosque.avif" alt="Bosque Templado">
+                    </div>
+                    <div class="card-content">
+                        <h3>Bosque Templado</h3>
+                        <p>Ciclos de vida y estaciones</p>
+                        <span class="link-text">Ver animales &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="polar.html" class="biome-card wide">
+                    <div class="card-image">
+                        <img src="img/polar.avif" alt="Polar">
+                    </div>
+                    <div class="card-content">
+                        <h3>Zona Polar</h3>
+                        <p>Gigantes de hielo y nieve</p>
+                        <span class="link-text">Ver animales &rarr;</span>
+                    </div>
+                </a>
+                <a href="oceano.html" class="biome-card wide">
+                    <div class="card-image">
+                        <img src="img/oceano.avif" alt="Océano">
+                    </div>  
+                    <div class="card-content">
+                        <h3>Océano</h3>
+                        <p>Animales de las profundidades marinas</p>
+                        <span class="link-text">Ver animales &rarr;</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="brand">ZooMundo</div>
+            <p>Diseñado para educar e inspirar.</p>
+            <p class="copy">&copy; 2025 ZooMundo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
