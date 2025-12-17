@@ -9,110 +9,187 @@
 </head>
 <body>
 
-    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+    <nav class="navbar">
         <div class="logo">ZooMundo</div>
         <ul class="nav-links">
             <li><a href="index.html">← Volver al Inicio</a></li>
         </ul>
     </nav>
 
-    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/polar.avif');">
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/polar.avif');">
         <div class="header-content">
-            <h1>El Ártico y la Tundra</h1>
-            <p>Un reino de hielo eterno donde solo los más fuertes sobreviven al frío extremo.</p>
+            <h1>El Ártico</h1>
+            <p>Supervivencia extrema en el reino del hielo.</p>
         </div>
     </header>
 
     <main class="container section-habitats">
-        
         <div class="animal-grid">
             
             <div class="animal-card" onclick="openModal(
-                'Oso Polar', 
-                'Es el carnívoro terrestre más grande de la Tierra. Aunque su pelaje parece blanco, es transparente y su piel es negra para absorber el calor del sol.',
-                'Carnívoro', 'Mamífero', '350 - 700 kg', '2.4 - 3.0 m (Largo)', 'Vulnerable',
-                'img/oso_polar.avif'
+                'Oso Polar (Ursus maritimus)', 
+                `<strong>Familia:</strong> Ursidae (Osos)<br>
+                 <strong>Velocidad:</strong> Hasta 40 km/h (Tierra) / 10 km/h (Nado)<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Es el carnívoro terrestre más grande. Su piel bajo el pelo es <strong>negra</strong> para absorber calor. Su pelaje no es blanco, sino translúcido y hueco.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Círculo Polar Ártico (Canadá, Alaska, Rusia, Noruega). Dependen totalmente del hielo marino para cazar.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro estricto. Su dieta se basa casi exclusivamente en focas (anilladas y barbudas). Pueden oler una foca a 30 km de distancia.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son nómadas solitarios. Son nadadores excepcionales, capaces de nadar 100 km seguidos sin descanso.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Las hembras cavan oseras en la nieve para dar a luz. Los cachorros nacen en invierno pesando menos de 1 kg.</p>`,
+                'Carnívoro', 'Mamífero', '350 - 700 kg', '2.4 - 3.0 m', 'Vulnerable', 'img/oso_polar.avif',
+                'Hielo Marino Ártico', '20 - 25 años',
+                'Aunque parecen blancos, su piel es negra y su pelo es transparente para atrapar la luz solar.'
             )">
                 <img src="img/oso_polar.avif" alt="Oso Polar">
-                <div class="animal-info">
-                    <h3>Oso Polar</h3>
-                    <p>El rey del hielo</p>
-                </div>
+                <div class="animal-info"><h3>Oso Polar</h3><p>El rey del hielo</p></div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Zorro Ártico', 
-                'Su pelaje cambia de color con las estaciones: blanco en invierno para camuflarse en la nieve y marrón en verano. Resiste temperaturas de hasta -50°C.',
-                'Omnívoro', 'Mamífero', '3 - 8 kg', '46 - 68 cm (Largo)', 'No',
-                'img/zorro_artico.avif'
+                'Zorro Ártico (Vulpes lagopus)', 
+                `<strong>Familia:</strong> Canidae (Cánidos)<br>
+                 <strong>Resistencia:</strong> Soporta hasta -50°C sin temblar.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Posee el pelaje más denso de cualquier mamífero. Sus orejas son pequeñas y redondeadas para perder menos calor.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Tundra ártica y alpina en todo el hemisferio norte. Viven en madrigueras complejas que pueden tener siglos de antigüedad.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro oportunista. Come lemmings, aves, huevos y carroña dejada por osos polares.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>No hibernan. Usan su cola como bufanda al dormir para cubrirse la nariz y conservar calor.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Tienen las camadas más grandes de los carnívoros salvajes: pueden tener hasta 14 cachorros en un buen año.</p>`,
+                'Omnívoro', 'Mamífero', '3 - 8 kg', '46 - 68 cm', 'Preocupación Menor', 'img/zorro_artico.avif',
+                'Tundra Ártica', '3 - 6 años',
+                'Cambian de color: blanco en invierno para camuflarse en la nieve y marrón grisáceo en verano.'
             )">
                 <img src="img/zorro_artico.avif" alt="Zorro Ártico">
-                <div class="animal-info">
-                    <h3>Zorro Ártico</h3>
-                    <p>El camuflaje viviente</p>
-                </div>
+                <div class="animal-info"><h3>Zorro Ártico</h3><p>El camuflaje viviente</p></div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Leopardo de las Nieves', 
-                'Conocido como el fantasma de las montañas. Usa su larga y gruesa cola para mantener el equilibrio en los riscos y para cubrirse la nariz del frío al dormir.',
-                'Carnívoro', 'Mamífero', '22 - 55 kg', '1.0 - 1.3 m (Largo)', 'Vulnerable',
-                'img/leopardo_nieves.avif'
+                'Leopardo de las Nieves (Panthera uncia)', 
+                `<strong>Familia:</strong> Felidae (Felinos)<br>
+                 <strong>Salto:</strong> Puede saltar 6 veces la longitud de su cuerpo.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Patas anchas que actúan como raquetas de nieve. Su cola es casi tan larga como su cuerpo y muy gruesa.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Montañas de Asia Central (Himalaya, Tíbet). Viven en riscos escarpados entre 3,000 y 4,500 metros de altura.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Caza ovejas azules (bharal), íbices y marmotas. Es capaz de cazar presas tres veces más pesadas que él.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Conocido como el 'Fantasma de las Montañas' por su increíble camuflaje. Son solitarios y muy difíciles de ver.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>El apareamiento es en invierno. La madre cría a los cachorros en cuevas rocosas protegidas.</p>`,
+                'Carnívoro', 'Mamífero', '22 - 55 kg', '1.0 - 1.3 m', 'Vulnerable', 'img/leopardo_nieves.avif',
+                'Montañas Rocosas (Asia)', '15 - 18 años',
+                'No pueden rugir. A diferencia de leones o tigres, emiten un sonido parecido a un maullido fuerte o bufido.'
             )">
-                <img src="img/leopardo_nieves.avif" alt="Leopardo de las Nieves">
-                <div class="animal-info">
-                    <h3>Leopardo de las Nieves</h3>
-                    <p>El fantasma de la montaña</p>
-                </div>
+                <img src="img/leopardo_nieves.avif" alt="Leopardo">
+                <div class="animal-info"><h3>Leopardo Nieves</h3><p>El fantasma de la montaña</p></div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Buey Almizclero', 
-                'Sobreviviente de la Era de Hielo. Su pelaje interno, llamado qiviut, es 8 veces más cálido que la lana de oveja. Forman círculos defensivos para proteger a las crías.',
-                'Herbívoro', 'Mamífero', '180 - 400 kg', '1.1 - 1.5 m (Alto)', 'No',
-                'img/buey_almizclero.avif'
+                'Buey Almizclero (Ovibos moschatus)', 
+                `<strong>Familia:</strong> Bovidae (Bóvidos)<br>
+                 <strong>Defensa:</strong> Forman círculos impenetrables.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Parece un búfalo pero está más relacionado con las cabras. Su pelaje externo llega casi al suelo.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Tundra ártica de Canadá y Groenlandia. Sobrevivieron a la última Edad de Hielo junto a los mamuts.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Herbívoro. Cavan en la nieve con sus pezuñas para encontrar musgos, líquenes y raíces.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Viven en manadas. Ante una amenaza (lobos), forman un círculo con los cuernos hacia fuera y las crías en el centro.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Los machos chocan sus cabezas violentamente durante la época de celo para ganar el derecho a aparearse.</p>`,
+                'Herbívoro', 'Mamífero', '180 - 400 kg', '2.0 - 2.5 m', 'Preocupación Menor', 'img/buey.avif',
+                'Tundra Helada', '12 - 20 años',
+                'Su lana interna, llamada Qiviut, es 8 veces más cálida que la lana de oveja y muy cotizada.'
             )">
                 <img src="img/buey.avif" alt="Buey Almizclero">
-                <div class="animal-info">
-                    <h3>Buey Almizclero</h3>
-                    <p>La fortaleza peluda</p>
-                </div>
+                <div class="animal-info"><h3>Buey Almizclero</h3><p>La fortaleza peluda</p></div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Foca de Groenlandia', 
-                'Pasan gran parte de su vida en el mar. Tienen una gruesa capa de grasa bajo la piel que les permite mantener su temperatura corporal en aguas heladas.',
-                'Carnívoro', 'Mamífero', '130 kg (Promedio)', '1.7 m (Largo)', 'No',
-                'img/foca.avif'
+                'Foca de Groenlandia (Pagophilus groenlandicus)', 
+                `<strong>Familia:</strong> Phocidae (Focas)<br>
+                 <strong>Buceo:</strong> Pueden sumergirse hasta 270 metros.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Tienen una marca negra en forma de arpa o herradura en el dorso. Los bebés nacen totalmente blancos.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Atlántico Norte y Océano Ártico. Pasan la mayor parte de su vida nadando en aguas heladas.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Peces (bacalao, capelán) y crustáceos. Sus bigotes detectan las vibraciones de los peces en la oscuridad.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son muy sociales y migratorias. Viajan miles de kilómetros cada año en grandes grupos ruidosos.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Dan a luz sobre el hielo flotante. La leche materna es 50% grasa, permitiendo al bebé triplicar su peso en 12 días.</p>`,
+                'Carnívoro', 'Mamífero', '130 kg', '1.7 - 2.0 m', 'Preocupación Menor', 'img/foca.avif',
+                'Océano Ártico', '20 - 35 años',
+                'Los bebés tienen un pelaje blanco esponjoso para absorber el sol, pero no es impermeable, por lo que no pueden nadar al nacer.'
             )">
                 <img src="img/foca.avif" alt="Foca">
-                <div class="animal-info">
-                    <h3>Foca</h3>
-                    <p>Ágil nadadora polar</p>
-                </div>
+                <div class="animal-info"><h3>Foca</h3><p>Ágil nadadora polar</p></div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Morsa', 
-                'Reconocibles por sus largos colmillos que usan para salir del agua y romper el hielo. Su piel puede tener hasta 4 cm de grosor.',
-                'Carnívoro', 'Mamífero', '800 - 1700 kg', '2.7 - 3.6 m (Largo)', 'Vulnerable',
-                'img/morsa.avif'
+                'Morsa (Odobenus rosmarus)', 
+                `<strong>Familia:</strong> Odobenidae<br>
+                 <strong>Piel:</strong> Hasta 4 cm de grosor.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Inconfundibles por sus largos colmillos (marfil) y bigotes rígidos. Tienen una capa de grasa enorme.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Aguas poco profundas de la plataforma continental ártica. Prefieren descansar en bloques de hielo.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Usan sus bigotes sensibles para encontrar almejas en el fondo fangoso. Succionan la carne y escupen la concha.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Muy gregarias, se amontonan por cientos en las playas para conservar calor corporal. Son ruidosas y agresivas.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Tienen la tasa de reproducción más baja de los pinnípedos. Las crías se quedan con la madre hasta 3 años.</p>`,
+                'Carnívoro', 'Mamífero', '800 - 1700 kg', '2.7 - 3.6 m', 'Vulnerable', 'img/morsa.avif',
+                'Costas Árticas', '40 años',
+                'Usan sus colmillos como piolets (herramientas de escalada) para sacar su enorme cuerpo del agua y subir al hielo.'
             )">
                 <img src="img/morsa.avif" alt="Morsa">
-                <div class="animal-info">
-                    <h3>Morsa</h3>
-                    <p>El gigante de colmillos</p>
-                </div>
+                <div class="animal-info"><h3>Morsa</h3><p>El gigante de colmillos</p></div>
             </div>
 
         </div>
     </main>
-
-    <footer>
-        <div class="container footer-content">
-            <p>&copy; 2025 ZooMundo - Sección Polar</p>
-        </div>
-    </footer>
 
     <div id="animalModal" class="modal">
         <div class="modal-content">
@@ -124,16 +201,25 @@
             
             <div class="modal-info-container">
                 <h2 id="m-nombre">Nombre Animal</h2>
-                <p id="m-desc" class="modal-description">Descripción corta aquí...</p> 
                 
                 <div class="info-grid">
                     <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
                     <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
                     <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
                     <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                    <div class="data-row"><span class="data-label">Hábitat:</span> <span id="m-habitat">...</span></div>
+                    <div class="data-row"><span class="data-label">Vida:</span> <span id="m-vida">...</span></div>
                 </div>
 
-                <div id="m-peligro" class="danger-status">En Peligro de Extinción</div>
+                <div id="m-desc" class="modal-description">
+                    </div> 
+
+                <div class="fun-fact-box">
+                    <strong>💡 ¿Sabías que?</strong>
+                    <p id="m-dato">...</p>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro</div>
             </div>
         </div>
     </div>

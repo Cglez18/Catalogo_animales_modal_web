@@ -7,6 +7,11 @@
     --accent-hover: #f9d666;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
+    --primary: #2c3e50;
+    --accent-m: #00a8cc; /* Azul hielo para resaltar */
+    --bg-light: #f4f4f4;
+    --bg-dark: #222;
+    --text-dark: #333;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -284,114 +289,142 @@ footer {
     color: var(--text-muted);
 }
 
-/* Estilos para la descripción dentro del Modal */
-.modal-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555; /* Texto oscuro para leer bien sobre fondo blanco */
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
-    font-style: italic;
-}
-
-.info-grid {
-    display: grid;
-    gap: 10px;
-}
-
-/* Ajuste del Modal para que el texto sea legible en modo oscuro/claro */
-.modal-content {
-    background-color: #ffffff; /* El modal lo mantenemos blanco para limpieza */
-}
-.data-label { color: #222; }
-.data-row { color: #444; }
-.modal-content h2 { color: #111; }
-/* --- CORRECCIÓN DEL MODAL (VENTANA EMERGENTE) --- */
-
+/* --- MODAL REDISEÑADO (HORIZONTAL IMAGE) --- */
 .modal {
-    display: none; /* Oculto por defecto. JS lo cambia a 'flex' al hacer clic */
-    position: fixed; /* Se queda fijo en la pantalla aunque hagas scroll */
-    z-index: 2000; /* Se asegura de estar ENCIMA de todo lo demás */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.85); /* Fondo negro semitransparente */
-    
-    /* Centrado del contenido */
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.85); 
+    align-items: center; 
     justify-content: center;
-    align-items: center;
     padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    background-color: #fff; /* Fondo blanco para la tarjeta */
-    border-radius: 15px;
+    background-color: #fff;
     width: 100%;
-    max-width: 900px;
-    display: flex; /* Para poner imagen a la izquierda y texto a la derecha */
-    flex-direction: column; /* En celular, uno debajo del otro */
+    max-width: 900px; /* Ancho máximo */
+    height: 90vh;     /* Altura fija del 90% de la pantalla */
+    border-radius: 12px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column; /* IMPORTANTE: Imagen arriba, texto abajo */
     position: relative;
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-    animation: aparecer 0.3s ease-out;
+    animation: slideUp 0.4s ease-out;
 }
 
-/* En pantallas grandes (PC/Laptop), poner imagen al lado del texto */
-@media (min-width: 768px) {
-    .modal-content {
-        flex-direction: row;
-        height: auto;
-        max-height: 80vh; /* Para que no sea más alto que la pantalla */
-    }
-    .modal-img-container {
-        width: 45%;
-        height: auto;
-    }
-    .modal-info-container {
-        width: 55%;
-        overflow-y: auto; /* Si el texto es muy largo, permite scroll interno */
-    }
+/* 1. Imagen Panorámica Arriba */
+.modal-img-container {
+    width: 100%;
+    height: 45%; /* Ocupa el 45% superior del modal */
+    background: #000;
 }
 
 .modal-img-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* La imagen cubre todo el espacio sin deformarse */
+    object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformar */
+    object-position: center;
 }
 
+/* 2. Contenedor de Texto Abajo */
+.modal-info-container {
+    padding: 30px 40px;
+    height: 65%; /* El resto del espacio */
+    overflow-y: auto; /* Scroll si el texto es muy largo */
+}
+
+/* Títulos y Texto */
+#m-nombre {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-top: 0;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent-m);
+    padding-bottom: 10px;
+}
+
+/* Grid de Datos Técnicos */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+}
+
+.data-row { font-size: 0.95rem; }
+.data-label { font-weight: 700; color: var(--primary); display: block; margin-bottom: 2px;}
+
+/* Estilos para el HTML inyectado (La info larga) */
+.modal-description h3 {
+    color: var(--accent);
+    margin-top: 25px;
+    font-size: 1.3rem;
+    border-left: 4px solid var(--primary);
+    padding-left: 10px;
+}
+
+.modal-description p, .modal-description li {
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.modal-description strong { color: var(--primary); }
 .modal-info-container {
     padding: 40px;
     color: #333;
     text-align: left;
 }
 
-/* Botón de cerrar (X) */
+
+/* Dato Curioso */
+.fun-fact-box {
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    border-left: 5px solid #2196f3;
+}
+
+.danger-status {
+    display: inline-block;
+    background: #e74c3c;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 .close {
     position: absolute;
     top: 15px;
     right: 20px;
-    font-size: 2rem;
-    color: #333;
-    background: rgba(255,255,255,0.8);
-    width: 40px;
-    height: 40px;
-    line-height: 35px;
-    text-align: center;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    transition: 0.3s;
-}
-
-.close:hover {
-    background: #d4af37; /* Color dorado al pasar el mouse */
     color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    z-index: 10;
+    transition: 0.2s;
 }
+.close:hover { color: var(--accent-m); transform: scale(1.1); }
 
-/* Animación suave al abrir */
-@keyframes aparecer {
+@keyframes slideUp {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }

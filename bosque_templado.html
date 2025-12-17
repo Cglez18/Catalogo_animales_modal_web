@@ -6,21 +6,20 @@
     <title>Bosque Templado | ZooMundo</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
 </head>
 <body>
 
-    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+    <nav class="navbar">
         <div class="logo">ZooMundo</div>
         <ul class="nav-links">
             <li><a href="index.html">← Volver al Inicio</a></li>
         </ul>
     </nav>
 
-    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/bosque.avif');">
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/bosque.avif');">
         <div class="header-content">
             <h1>Bosque Templado</h1>
-            <p>Un mundo de estaciones marcadas, donde la vida se adapta al cambio constante entre el verano verde y el invierno blanco.</p>
+            <p>El ciclo de las cuatro estaciones en su máximo esplendor.</p>
         </div>
     </header>
 
@@ -29,23 +28,57 @@
         <div class="animal-grid">
             
             <div class="animal-card" onclick="openModal(
-                'Oso Pardo / Grizzly', 
-                'El gigante del bosque. Pasa el otoño comiendo para acumular grasa y sobrevivir su hibernación invernal.',
-                'Omnívoro', 'Mamífero', '130 - 600 kg', '2.5 m (Erguido)', 'No',
-                'img/oso.avif'
+                'Oso Pardo (Ursus arctos)', 
+                `<strong>Familia:</strong> Ursidae<br>
+                 <strong>Fuerza:</strong> Garras de hasta 15 cm de largo.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Posee una gran joroba de músculo sobre los hombros que le da fuerza para cavar. Su pelaje varía de rubio a negro. Tienen un olfato 100 veces mejor que el humano.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Bosques y montañas de Europa, Asia y Norteamérica (Grizzly). Necesitan grandes territorios.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro (75% vegetal). Come bayas, raíces, miel, salmón y carroña. En otoño entra en 'hiperfagia' para ganar grasa antes del invierno.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Solitario. En invierno entra en letargo (hibernación falsa) donde no come, bebe ni defeca durante meses, reciclando sus desechos.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Las crías nacen durante la hibernación de la madre, ciegas y sin pelo. Maman leche rica en grasa mientras la madre duerme.</p>`,
+                'Omnívoro', 'Mamífero', '130 - 600 kg', '1.4 - 2.8 m', 'Preocupación Menor', 'img/oso_pardo.avif',
+                'Montañas y Bosques', '20 - 25 años',
+                'A pesar de su peso, pueden correr a 50 km/h, más rápido que el hombre más veloz del mundo (Usain Bolt).'
             )">
                 <img src="img/oso_pardo.avif" alt="Oso Pardo">
                 <div class="animal-info">
                     <h3>Oso Pardo</h3>
-                    <p>El rey del bosque</p>
+                    <p>El gigante del bosque</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Lobo Gris', 
-                'Depredador social por excelencia. Viven en manadas organizadas jerárquicamente y se comunican mediante aullidos complejos.',
-                'Carnívoro', 'Mamífero', '30 - 50 kg', '1.5 m (Largo)', 'No',
-                'img/lobo.avif'
+                'Lobo Gris (Canis lupus)', 
+                `<strong>Familia:</strong> Canidae<br>
+                 <strong>Comunicación:</strong> Sus aullidos se oyen a 16 km.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El cánido salvaje más grande. Tiene patas largas y pecho profundo para trotar incansablemente. Su pelaje tiene doble capa para aislar el frío y la lluvia.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Hemisferio Norte. Desde tundras hasta bosques espesos. Son muy adaptables.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Cazan en manada presas grandes como alces y bisontes. Usan estrategias de relevos para cansar a la presa.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Viven en manadas familiares con una jerarquía estricta. Son extremadamente sociales y cuidan a los miembros heridos.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Generalmente solo se reproduce la pareja dominante (alfa). Toda la manada ayuda a cuidar y alimentar a los cachorros.</p>`,
+                'Carnívoro', 'Mamífero', '30 - 80 kg', '1.0 - 1.6 m', 'Preocupación Menor', 'img/lobo_gris.avif',
+                'Bosques Boreales', '6 - 8 años',
+                'La mirada de un lobo es intensa; se comunican mucho con expresiones faciales y la posición de la cola y orejas.'
             )">
                 <img src="img/lobo_gris.avif" alt="Lobo Gris">
                 <div class="animal-info">
@@ -55,23 +88,57 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Ciervo / Venado', 
-                'Ágil y cauteloso. Los machos desarrollan grandes astas que se caen y renuevan cada año para la temporada de apareamiento.',
-                'Herbívoro', 'Mamífero', '60 - 200 kg', '1.2 m (Alto)', 'No',
-                'img/ciervo.avif'
+                'Ciervo Rojo (Cervus elaphus)', 
+                `<strong>Familia:</strong> Cervidae<br>
+                 <strong>Defensa:</strong> Cornamenta y pezuñas afiladas.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Pelaje rojizo en verano y grisáceo en invierno. Los machos poseen grandes astas ramificadas que se caen y vuelven a crecer cada año.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Bosques abiertos y praderas de Europa, Asia y América. Prefieren zonas con claros para pastar.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Herbívoro rumiante. Pastan hierba, hojas, brotes y cortezas. Tienen 4 estómagos para digerir la celulosa.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Las hembras viven en grupos, los machos son más solitarios. En época de celo, los machos braman para atraer hembras y desafiar rivales.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Los cervatillos nacen con manchas blancas en el lomo que les sirven de camuflaje perfecto entre la luz y sombra del bosque.</p>`,
+                'Herbívoro', 'Mamífero', '160 - 240 kg', '1.7 - 2.5 m', 'Preocupación Menor', 'img/venado.avif',
+                'Bosques Caducifolios', '10 - 13 años',
+                'Sus astas son el tejido de crecimiento más rápido en el reino animal, creciendo hasta 2.5 cm al día.'
             )">
                 <img src="img/venado.avif" alt="Ciervo">
                 <div class="animal-info">
                     <h3>Ciervo</h3>
-                    <p>Nobleza y agilidad</p>
+                    <p>El noble del bosque</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Águila Real', 
-                'Una de las aves de presa más poderosas. Su visión es 8 veces más aguda que la humana, permitiéndole ver presas a kilómetros.',
-                'Carnívoro', 'Ave', '4 - 6 kg', '2.2 m (Envergadura)', 'No',
-                'img/aguila.avif'
+                'Águila Real (Aquila chrysaetos)', 
+                `<strong>Familia:</strong> Accipitridae<br>
+                 <strong>Visión:</strong> Ven 8 veces mejor que un humano.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Una de las rapaces más grandes. Plumaje marrón oscuro con destellos dorados en la cabeza. Sus garras ejercen una presión de 70 kg/cm².</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Zonas montañosas y bosques abiertos de todo el hemisferio norte. Anidan en riscos altos o árboles viejos.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívora. Caza conejos, liebres, zorros e incluso cabras jóvenes. Ataca en picada alcanzando 320 km/h.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Monógamas (parejas de por vida). Defienden territorios enormes de hasta 150 km². Usan corrientes térmicas para planear sin gastar energía.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Construyen nidos gigantescos que reutilizan por años, añadiendo ramas cada temporada. Ponen 1 o 2 huevos.</p>`,
+                'Carnívoro', 'Ave', '3 - 6.5 kg', '2.2 m (Envergadura)', 'Preocupación Menor', 'img/aguila.avif',
+                'Alta Montaña', '30 años',
+                'Es el símbolo nacional de México (y de muchos otros países) por su majestuosidad y poder.'
             )">
                 <img src="img/aguila.avif" alt="Águila Real">
                 <div class="animal-info">
@@ -81,28 +148,62 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Zorro Rojo', 
-                'Cazador solitario y oportunista. Es extremadamente adaptable y usa su gran cola para mantener el equilibrio y abrigarse.',
-                'Omnívoro', 'Mamífero', '5 - 7 kg', '60 - 90 cm (Largo)', 'No',
-                'img/zorro.avif'
+                'Zorro Rojo (Vulpes vulpes)', 
+                `<strong>Familia:</strong> Canidae<br>
+                 <strong>Salto:</strong> Puede saltar 2 metros en vertical.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Pelaje rojizo brillante, cola tupida con punta blanca y patas negras. Ojos con pupilas verticales como los gatos para ver de noche.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Es el carnívoro terrestre más extendido del mundo. Vive en bosques, desiertos y cada vez más en ciudades.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro generalista. Come roedores (ratones), conejos, insectos, frutas, basura y bayas. Almacenan comida sobrante enterrándola.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Caza usando un salto característico para caer en picada sobre ratones bajo la nieve. Son crepusculares y nocturnos.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Usan madrigueras subterráneas complejas para criar. Ambos padres cuidan a los zorreznos.</p>`,
+                'Omnívoro', 'Mamífero', '5 - 10 kg', '60 - 90 cm', 'Preocupación Menor', 'img/zorro.avif',
+                'Bosques y Campiñas', '2 - 5 años',
+                'Se orientan usando el campo magnético de la Tierra para calcular la distancia exacta de su salto al cazar.'
             )">
                 <img src="img/zorro.avif" alt="Zorro Rojo">
                 <div class="animal-info">
                     <h3>Zorro Rojo</h3>
-                    <p>Astucia y sigilo</p>
+                    <p>El astuto oportunista</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Mapache', 
-                'Conocido por su antifaz negro y sus patas delanteras muy sensibles que usa para manipular alimentos y abrir objetos.',
-                'Omnívoro', 'Mamífero', '5 - 9 kg', '60 cm (Largo)', 'No',
-                'img/mapache.avif'
+                'Mapache (Procyon lotor)', 
+                `<strong>Familia:</strong> Procyonidae<br>
+                 <strong>Tacto:</strong> Sus manos son super sensibles.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Inconfundible por su antifaz negro alrededor de los ojos y su cola anillada. Tienen manos delanteras muy hábiles con pulgares no oponibles.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Bosques mixtos cercanos al agua, pero se han adaptado increíblemente bien a vivir en ciudades y suburbios.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro total. Cangrejos, ranas, nueces, frutas y basura humana. Lavan su comida en agua para aumentar la sensibilidad táctil de sus manos, no por limpieza.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Nocturnos e inteligentes. Son capaces de abrir cerrojos y recordar soluciones a problemas por años.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Las hembras se aíslan para criar. Las crías permanecen en la madriguera (huecos de árboles) durante 2 meses.</p>`,
+                'Omnívoro', 'Mamífero', '5 - 12 kg', '40 - 70 cm', 'Preocupación Menor', 'img/mapache.avif',
+                'Bosques y Urbano', '2 - 3 años',
+                'Su nombre en náhuatl Mapache significa El que tiene manos, refiriéndose a su destreza manual.'
             )">
                 <img src="img/mapache.avif" alt="Mapache">
                 <div class="animal-info">
                     <h3>Mapache</h3>
-                    <p>El bandido del bosque</p>
+                    <p>El bandido enmascarado</p>
                 </div>
             </div>
 
@@ -125,16 +226,24 @@
             
             <div class="modal-info-container">
                 <h2 id="m-nombre">Nombre Animal</h2>
-                <p id="m-desc" class="modal-description">Descripción...</p> 
                 
                 <div class="info-grid">
                     <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
                     <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
                     <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
                     <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                    <div class="data-row"><span class="data-label">Hábitat:</span> <span id="m-habitat">...</span></div>
+                    <div class="data-row"><span class="data-label">Vida:</span> <span id="m-vida">...</span></div>
                 </div>
 
-                <div id="m-peligro" class="danger-status">⚠️ En Peligro de Extinción</div>
+                <div id="m-desc" class="modal-description"></div> 
+
+                <div class="fun-fact-box">
+                    <strong>💡 ¿Sabías que?</strong>
+                    <p id="m-dato">...</p>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro</div>
             </div>
         </div>
     </div>

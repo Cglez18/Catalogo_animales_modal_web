@@ -9,17 +9,17 @@
 </head>
 <body>
 
-    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+    <nav class="navbar">
         <div class="logo">ZooMundo</div>
         <ul class="nav-links">
             <li><a href="index.html">← Volver al Inicio</a></li>
         </ul>
     </nav>
 
-    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/desierto.avif');">
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/desierto.avif');">
         <div class="header-content">
             <h1>El Desierto</h1>
-            <p>Un ecosistema de extremos donde la vida florece contra todo pronóstico.</p>
+            <p>Adaptación extrema bajo el sol implacable.</p>
         </div>
     </header>
 
@@ -29,9 +29,26 @@
             
             <div class="animal-card" onclick="openModal(
                 'Camello / Dromedario', 
-                'Sus jorobas almacenan grasa, no agua. Pueden beber hasta 100 litros de agua en apenas 10 minutos para rehidratarse.',
-                'Herbívoro', 'Mamífero', '400 - 600 kg', '1.8 - 2.0 m (Alto)', 'No',
-                'img/camello.avif'
+                `<strong>Familia:</strong> Camelidae<br>
+                 <strong>Resistencia:</strong> Pueden perder hasta el 30% de agua corporal sin morir.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Tienen una joroba que almacena grasa (no agua) para tener energía. Sus pestañas son largas y dobles para protegerse de la arena.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Desiertos de África del Norte y Oriente Medio. Están perfectamente diseñados para caminar sobre arena caliente sin quemarse.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Herbívoro. Comen plantas espinosas, cactus y hierbas secas. Sus labios son gruesos para no lastimarse con las espinas.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son animales de manada. Para ahorrar agua, su orina es espesa como un jarabe y casi no sudan hasta que hace muchísimo calor.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>La gestación dura 13 a 15 meses. La cría nace con los ojos abiertos y puede caminar pocas horas después.</p>`,
+                'Herbívoro', 'Mamífero', '400 - 600 kg', '1.8 - 2.0 m', 'No', 'img/camello.avif',
+                'Desiertos de Arena', '40 - 50 años',
+                'Pueden beber hasta 100 litros de agua en apenas 10 minutos para rehidratarse por completo.'
             )">
                 <img src="img/camello.avif" alt="Camello">
                 <div class="animal-info">
@@ -41,10 +58,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Coyote', 
-                'Depredador oportunista y extremadamente inteligente. Su aullido es el sonido icónico del oeste americano.',
-                'Omnívoro', 'Mamífero', '7 - 20 kg', '1.0 - 1.3 m (Largo)', 'No',
-                'img/coyote.avif'
+                'Coyote (Canis latrans)', 
+                `<strong>Familia:</strong> Canidae (Cánidos)<br>
+                 <strong>Velocidad:</strong> Hasta 69 km/h persiguiendo presas.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Parecido a un perro pastor alemán pero más delgado. Su pelaje varía según la geografía para camuflarse mejor.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Desde Canadá hasta Panamá. Son increíblemente adaptables y ahora viven incluso en ciudades grandes.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro oportunista. Cazan conejos y roedores, pero también comen frutas, insectos y basura humana si es necesario.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son muy vocales; su nombre científico significa 'perro ladrador'. A veces cazan en colaboración con tejones.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Son monógamos y parejas de por vida. Ambos padres cuidan a los cachorros y les enseñan a cazar.</p>`,
+                'Omnívoro', 'Mamífero', '7 - 20 kg', '1.0 - 1.3 m', 'Preocupación Menor', 'img/coyote.avif',
+                'Desiertos y Praderas', '10 - 14 años',
+                'Son tan inteligentes que han aprendido a mirar el tráfico antes de cruzar carreteras.'
             )">
                 <img src="img/coyote.avif" alt="Coyote">
                 <div class="animal-info">
@@ -54,10 +88,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Fennec (Zorro del Desierto)', 
-                'Posee orejas de hasta 15cm que actúan como radiadores para disipar el calor corporal y localizar presas bajo la arena.',
-                'Carnívoro / Omnívoro', 'Mamífero', '1.0 - 1.5 kg', '30 - 40 cm (Largo)', 'No',
-                'img/fennec.avif'
+                'Fennec (Vulpes zerda)', 
+                `<strong>Familia:</strong> Canidae (Zorros)<br>
+                 <strong>Orejas:</strong> Miden 15 cm, la mitad de su cuerpo.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Es el zorro más pequeño del mundo. Sus enormes orejas actúan como radiadores para disipar el calor corporal.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Desierto del Sahara y península del Sinaí. Viven en madrigueras subterráneas frescas durante el día.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro. Come insectos, pequeños roedores, huevos y plantas. Obtiene casi toda el agua que necesita de su comida.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Es nocturno para evitar el sol abrasador. Sus patas tienen pelo grueso en las plantas para no quemarse con la arena.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Se emparejan de por vida. Las crías nacen ciegas y la madre no deja la madriguera hasta que son mayores.</p>`,
+                'Omnívoro', 'Mamífero', '1.0 - 1.5 kg', '30 - 40 cm', 'Preocupación Menor', 'img/fennec.avif',
+                'Dunas del Sahara', '10 - 14 años',
+                'Sus oídos son tan sensibles que pueden escuchar a los insectos caminando bajo la arena.'
             )">
                 <img src="img/fennec.avif" alt="Fennec">
                 <div class="animal-info">
@@ -67,10 +118,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Serpiente de Cascabel', 
-                'Detecta el calor de sus presas mediante fosetas termosensibles. Su cascabel advierte a los intrusos para evitar conflictos.',
-                'Carnívoro', 'Reptil', '1 - 4 kg', '1.5 - 2.0 m (Largo)', 'No',
-                'img/serpiente.avif'
+                'Serpiente de Cascabel (Crotalus)', 
+                `<strong>Familia:</strong> Viperidae (Víboras)<br>
+                 <strong>Ataque:</strong> Atacan en 1/10 de segundo.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Posee un cascabel en la cola hecho de queratina (como nuestras uñas). Tienen fosetas termosensibles para 'ver' el calor.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Exclusivas de América, desde Canadá hasta Argentina. Prefieren zonas áridas y rocosas.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívora. Embosca a roedores y aves. Inyecta veneno hemotóxico que digiere los tejidos de la presa antes de tragarla.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>No quieren morder humanos; usan su cascabel como advertencia. Son de sangre fría y necesitan sol para tener energía.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Son ovovivíparas: incuban los huevos dentro de su cuerpo y dan a luz a crías vivas ya venenosas.</p>`,
+                'Carnívoro', 'Reptil', '1 - 4 kg', '1.5 - 2.0 m', 'Preocupación Menor', 'img/serpiente.avif',
+                'Desiertos Rocosos', '10 - 25 años',
+                'Cada vez que mudan de piel, se añade un nuevo segmento a su cascabel, aunque a menudo se rompen.'
             )">
                 <img src="img/serpiente.avif" alt="Serpiente de Cascabel">
                 <div class="animal-info">
@@ -80,10 +148,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Correcaminos', 
-                'Prefiere correr a volar, alcanzando 32 km/h. Es famoso por cazar serpientes de cascabel y lagartijas con gran agilidad.',
-                'Omnívoro', 'Ave', '300 - 500 g', '50 - 60 cm (Largo)', 'No',
-                'img/correcaminos.avif'
+                'Correcaminos (Geococcyx)', 
+                `<strong>Familia:</strong> Cuculidae<br>
+                 <strong>Velocidad:</strong> Alcanza 32 km/h corriendo.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Ave delgada de patas largas y cola larga para mantener el equilibrio al girar rápido. Tienen una cresta distintiva.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Desiertos del suroeste de EE.UU. y México. Prefieren matorrales áridos y chaparrales.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro feroz. Come insectos, lagartos y ¡serpientes de cascabel! También frutas y semillas.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Prefieren correr a volar. Para matar serpientes, las atrapan con el pico y las golpean contra las rocas.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>El macho ofrece comida a la hembra como regalo antes de aparearse. Ambos construyen el nido.</p>`,
+                'Omnívoro', 'Ave', '300 - 500 g', '50 - 60 cm', 'Preocupación Menor', 'img/correcaminos.avif',
+                'Matorral Desértico', '7 - 8 años',
+                'Tienen patas zigodáctilas (dos dedos adelante y dos atrás), dejando huellas en forma de X que confunden a los depredadores.'
             )">
                 <img src="img/correcaminos.avif" alt="Correcaminos">
                 <div class="animal-info">
@@ -93,10 +178,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Monstruo de Gila', 
-                'Uno de los pocos lagartos venenosos. Almacena grasa en su cola gruesa para sobrevivir meses sin comida.',
-                'Carnívoro', 'Reptil', '1 - 2 kg', '50 cm (Largo)', 'Casi Amenazado',
-                'img/monstruo_gila.avif'
+                'Monstruo de Gila (Heloderma suspectum)', 
+                `<strong>Familia:</strong> Helodermatidae<br>
+                 <strong>Metabolismo:</strong> Pueden pasar meses sin comer.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Lagarto pesado y lento con piel de cuentas naranjas y negras (osteodermos). Su cola gruesa almacena grasa.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Desiertos de Sonora, Arizona y norte de México. Pasan el 90% de su vida bajo tierra.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Se especializa en saquear nidos para comer huevos y crías de mamíferos. Su veneno es defensivo.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>A diferencia de las serpientes, no inyecta veneno con colmillos huecos, sino que mastica para que el veneno fluya por ranuras en sus dientes.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Ponen huevos en verano que incuban durante el invierno y eclosionan hasta la primavera siguiente.</p>`,
+                'Carnívoro', 'Reptil', '1 - 2 kg', '50 cm', 'Casi Amenazado', 'img/monstruo_gila.avif',
+                'Desierto de Sonora', '20 - 30 años',
+                'Su saliva contiene una sustancia llamada exendina-4, que se usa en medicinas para tratar la diabetes humana.'
             )">
                 <img src="img/monstruo_gila.avif" alt="Monstruo de Gila">
                 <div class="animal-info">
@@ -124,16 +226,24 @@
             
             <div class="modal-info-container">
                 <h2 id="m-nombre">Nombre Animal</h2>
-                <p id="m-desc" class="modal-description">Descripción corta aquí...</p> 
                 
                 <div class="info-grid">
                     <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
                     <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
                     <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
                     <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                    <div class="data-row"><span class="data-label">Hábitat:</span> <span id="m-habitat">...</span></div>
+                    <div class="data-row"><span class="data-label">Vida:</span> <span id="m-vida">...</span></div>
                 </div>
 
-                <div id="m-peligro" class="danger-status">En Peligro de Extinción</div>
+                <div id="m-desc" class="modal-description"></div> 
+
+                <div class="fun-fact-box">
+                    <strong>💡 ¿Sabías que?</strong>
+                    <p id="m-dato">...</p>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro</div>
             </div>
         </div>
     </div>

@@ -9,17 +9,17 @@
 </head>
 <body>
 
-    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+    <nav class="navbar">
         <div class="logo">ZooMundo</div>
         <ul class="nav-links">
             <li><a href="index.html">← Volver al Inicio</a></li>
         </ul>
     </nav>
 
-    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/oceano.avif');">
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/oceano.avif');">
         <div class="header-content">
             <h1>Mundo Marino</h1>
-            <p>Sumérgete en las profundidades y descubre a los gigantes y genios del océano.</p>
+            <p>Sumérgete en el azul profundo donde habitan los gigantes.</p>
         </div>
     </header>
 
@@ -29,9 +29,26 @@
             
             <div class="animal-card" onclick="openModal(
                 'Delfín Nariz de Botella', 
-                'Famosos por su gran inteligencia y sociabilidad. Usan la ecolocalización (sonido) para ver bajo el agua y comunicarse con su manada.',
-                'Carnívoro', 'Mamífero', '150 - 650 kg', '2.0 - 4.0 m (Largo)', 'No',
-                'img/delfin.avif'
+                `<strong>Familia:</strong> Delphinidae<br>
+                 <strong>Sonar:</strong> Usan ecolocalización para 'ver' con sonido.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Cuerpo fusiforme e hidrodinámico color gris. Tienen una sonrisa perpetua debido a la curvatura de su boca. Su cerebro es muy complejo y grande.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Aguas templadas y tropicales de todo el mundo. Se encuentran tanto en alta mar como cerca de las costas.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Comen peces y calamares. Trabajan en equipo creando 'redes de burbujas' para atrapar bancos de peces.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Extremadamente sociales y juguetones. Se comunican mediante silbidos únicos; cada delfín tiene su propio nombre silbado.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>La gestación dura 12 meses. La cría nace de cola para no ahogarse y es empujada a la superficie por la madre para respirar.</p>`,
+                'Carnívoro', 'Mamífero', '150 - 650 kg', '2.0 - 4.0 m', 'Preocupación Menor', 'img/delfin.avif',
+                'Océanos Templados', '40 - 60 años',
+                'Duermen con un ojo abierto y la mitad del cerebro despierta para vigilar depredadores y subir a respirar.'
             )">
                 <img src="img/delfin.avif" alt="Delfín">
                 <div class="animal-info">
@@ -41,10 +58,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Orca', 
-                'Aunque la llaman ballena asesina, en realidad es el delfín más grande. Son depredadores alfa y cazan en grupos coordinados con estrategias complejas.',
-                'Carnívoro', 'Mamífero', '3,000 - 6,000 kg', '6.0 - 8.0 m (Largo)', 'Datos Insuficientes',
-                'img/orca.avif'
+                'Orca (Orcinus orca)', 
+                `<strong>Familia:</strong> Delphinidae (Delfines)<br>
+                 <strong>Caza:</strong> El depredador alfa supremo del océano.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Es el delfín más grande, no una ballena. Su aleta dorsal puede medir hasta 1.8 metros. Su patrón blanco y negro ayuda a camuflarse bajo el agua.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Todos los océanos del mundo, desde el Ártico hasta zonas tropicales. Es el mamífero con mayor distribución después del humano.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Comen focas, pingüinos e incluso tiburones blancos y ballenas. Tienen técnicas de caza especializadas según la región.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Viven en manadas matrilineales muy estables. Tienen dialectos vocales propios que solo entiende su familia.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Las hembras dejan de reproducirse a los 40 años pero siguen vivas para liderar y enseñar a la manada (efecto abuela).</p>`,
+                'Carnívoro', 'Mamífero', '3,000 - 6,000 kg', '6.0 - 8.0 m', 'Datos Insuficientes', 'img/orca.avif',
+                'Aguas Frías y Templadas', '50 - 80 años',
+                'A pesar de ser llamadas ballenas asesinas, no hay registros de orcas salvajes atacando a humanos.'
             )">
                 <img src="img/orca.avif" alt="Orca">
                 <div class="animal-info">
@@ -54,10 +88,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Ballena Azul', 
-                'El animal más grande que ha existido jamás. Su corazón es del tamaño de un coche pequeño y su lengua pesa tanto como un elefante.',
-                'Carnívoro (Planctófago)', 'Mamífero', 'Hasta 150,000 kg', '24 - 30 m (Largo)', 'En Peligro',
-                'img/ballena.avif'
+                'Ballena Azul (Balaenoptera musculus)', 
+                `<strong>Familia:</strong> Balaenopteridae<br>
+                 <strong>Corazón:</strong> Del tamaño de un coche pequeño.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El animal más grande que ha existido jamás. Su lengua pesa tanto como un elefante. Su piel es gris azulada con manchas pálidas.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Todos los océanos mayores. Pasan el verano en aguas polares alimentándose y el invierno en aguas cálidas reproduciéndose.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro planctófago. Se alimenta casi exclusivamente de krill (pequeños crustáceos), comiendo hasta 4 toneladas al día.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Generalmente solitarias o en pares. Emiten los sonidos más fuertes del reino animal, audibles a cientos de kilómetros.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>El ballenato bebe 600 litros de leche al día y gana 90 kg de peso cada 24 horas durante su primer año.</p>`,
+                'Carnívoro (Krill)', 'Mamífero', '150,000 kg', '24 - 30 m', 'En Peligro', 'img/ballena.avif',
+                'Alta Mar', '80 - 90 años',
+                'Sus arterias son tan grandes que un bebé humano podría gatear a través de ellas.'
             )">
                 <img src="img/ballena.avif" alt="Ballena Azul">
                 <div class="animal-info">
@@ -67,10 +118,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Tiburón Blanco', 
-                'Tiene un sentido del olfato increíble que detecta una gota de sangre a kilómetros. Su esqueleto no es de hueso, sino de cartílago.',
-                'Carnívoro', 'Pez Cartilaginoso', '600 - 2,000 kg', '4.5 - 6.0 m (Largo)', 'Vulnerable',
-                'img/tiburon.avif'
+                'Tiburón Blanco (Carcharodon carcharias)', 
+                `<strong>Familia:</strong> Lamnidae<br>
+                 <strong>Dientes:</strong> Tienen varias filas que se reemplazan siempre.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Esqueleto de cartílago, no hueso. Forma de torpedo. Tienen un sexto sentido (ampollas de Lorenzini) para detectar campos eléctricos de presas.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Aguas costeras templadas de todo el mundo (California, Sudáfrica, Australia). Prefieren zonas ricas en focas.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Focas, leones marinos, atunes y tortugas. Atacan desde abajo a gran velocidad para sorprender.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son solitarios. Pueden saltar completamente fuera del agua (breaching) para atrapar focas. Son curiosos e investigan objetos con la boca.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Ovovivíparos. Los huevos eclosionan dentro de la madre. A veces ocurre canibalismo intrauterino (el hermano mayor se come a los otros).</p>`,
+                'Carnívoro', 'Pez Cartilaginoso', '600 - 2,000 kg', '4.5 - 6.0 m', 'Vulnerable', 'img/tiburon.avif',
+                'Costas Templadas', '70 años',
+                'Pueden detectar una gota de sangre en 100 litros de agua y oler presas a 5 km de distancia.'
             )">
                 <img src="img/tiburon.avif" alt="Tiburón Blanco">
                 <div class="animal-info">
@@ -80,10 +148,27 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Pulpo', 
-                'Tiene tres corazones y sangre azul. Es el maestro del camuflaje, capaz de cambiar de color y textura en segundos para desaparecer.',
-                'Carnívoro', 'Molusco (Cefalópodo)', '3 - 10 kg', '60 - 90 cm (Largo)', 'No',
-                'img/pulpo.avif'
+                'Pulpo Común (Octopus vulgaris)', 
+                `<strong>Familia:</strong> Octopodidae<br>
+                 <strong>Sangre:</strong> Es de color azul por el cobre.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Tiene 3 corazones y 9 cerebros (uno central y uno en cada tentáculo). No tiene huesos, lo que le permite pasar por agujeros minúsculos.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Arrecifes de coral y fondos rocosos en océanos tropicales y templados. Viven en guaridas que decoran con piedras.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Cangrejos, langostas y moluscos. Usan su pico de loro (la única parte dura) para romper conchas.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Maestros del camuflaje: cambian de color y textura en milisegundos. Son muy inteligentes y capaces de usar herramientas.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>La hembra pone miles de huevos y los cuida sin comer hasta que eclosionan. Después del nacimiento, la madre muere de agotamiento.</p>`,
+                'Carnívoro', 'Molusco', '3 - 10 kg', '60 - 90 cm', 'Preocupación Menor', 'img/pulpo.avif',
+                'Arrecifes y Fondos', '1 - 2 años',
+                'Si pierden un tentáculo, pueden regenerarlo completamente en poco tiempo.'
             )">
                 <img src="img/pulpo.avif" alt="Pulpo">
                 <div class="animal-info">
@@ -93,12 +178,29 @@
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Mantarraya Gigante', 
-                'A diferencia de otras rayas, no tiene aguijón venenoso. Vuela a través del agua con elegancia filtrando plancton con su enorme boca.',
-                'Planctófago', 'Pez Cartilaginoso', 'Hasta 1,350 kg', 'Hasta 7 m (Envergadura)', 'Vulnerable',
-                'img/mantarraya.avif'
+                'Mantarraya Gigante (Mobula birostris)', 
+                `<strong>Familia:</strong> Mobulidae<br>
+                 <strong>Cerebro:</strong> El más grande de todos los peces.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Cuerpo plano en forma de rombo. A diferencia de las rayas comunes, NO tienen aguijón venenoso en la cola. Tienen la boca al frente.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Aguas tropicales y subtropicales de todo el mundo. A menudo visitan estaciones de limpieza en arrecifes.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Planctófago (filtradora). Nada con la boca abierta canalizando agua rica en plancton usando sus lóbulos cefálicos (cuernos).</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son pacíficas y curiosas con los buzos. A veces saltan fuera del agua, posiblemente para quitarse parásitos o comunicarse.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Tienen una tasa de reproducción muy baja. Dan a luz a una sola cría viva cada 2 a 5 años tras un año de gestación.</p>`,
+                'Planctófago', 'Pez Cartilaginoso', 'Hasta 1,350 kg', 'Hasta 7 m (Ancho)', 'Vulnerable', 'img/mantarraya.avif',
+                'Aguas Tropicales', '40 - 50 años',
+                'Sus manchas en el vientre son únicas en cada individuo, sirviendo como identificación visual.'
             )">
-                <img src="img/manta.avif" alt="Mantarraya">
+                <img src="img/mantarraya.avif" alt="Mantarraya">
                 <div class="animal-info">
                     <h3>Mantarraya</h3>
                     <p>La bailarina del océano</p>
@@ -124,16 +226,24 @@
             
             <div class="modal-info-container">
                 <h2 id="m-nombre">Nombre Animal</h2>
-                <p id="m-desc" class="modal-description">Descripción...</p> 
                 
                 <div class="info-grid">
                     <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
                     <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
                     <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
                     <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                    <div class="data-row"><span class="data-label">Hábitat:</span> <span id="m-habitat">...</span></div>
+                    <div class="data-row"><span class="data-label">Vida:</span> <span id="m-vida">...</span></div>
                 </div>
 
-                <div id="m-peligro" class="danger-status">En Peligro de Extinción</div>
+                <div id="m-desc" class="modal-description"></div> 
+
+                <div class="fun-fact-box">
+                    <strong>💡 ¿Sabías que?</strong>
+                    <p id="m-dato">...</p>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro</div>
             </div>
         </div>
     </div>

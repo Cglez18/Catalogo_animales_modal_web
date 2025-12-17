@@ -3,36 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabana | ZooMundo</title>
+    <title>La Sabana | ZooMundo</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <style>
-        @media (min-width: 768px) {
-            .animal-grid {
-                /* Fuerza exactamente 2 columnas del mismo tamaño */
-                grid-template-columns: repeat(2, 1fr); 
-            }
-            .animal-card img {
-                /* Hacemos la imagen un poco más alta para aprovechar el espacio ancho */
-                height: 300px; 
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+    <nav class="navbar">
         <div class="logo">ZooMundo</div>
         <ul class="nav-links">
             <li><a href="index.html">← Volver al Inicio</a></li>
         </ul>
     </nav>
 
-    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/sabana.avif');">
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/fondo_sabana.avif');">
         <div class="header-content">
             <h1>La Sabana</h1>
-            <p>El reino de los grandes mamíferos y las migraciones épicas.</p>
+            <p>El escenario de las migraciones más grandes de la Tierra.</p>
         </div>
     </header>
 
@@ -41,106 +28,242 @@
         <div class="animal-grid">
             
             <div class="animal-card" onclick="openModal(
-                'León', 
-                'Conocido como el Rey de la Selva, aunque vive en la sabana. Es el único felino verdaderamente social que vive en manadas.',
-                'Carnívoro', 'Mamífero', '190 kg', '1.2 m (Alto)', 'Vulnerable',
-                'img/leon.avif'
+                'León (Panthera leo)', 
+                `<strong>Familia:</strong> Felidae<br>
+                 <strong>Rugido:</strong> Se puede escuchar a 8 km de distancia.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El único felino con dimorfismo sexual evidente: los machos tienen una gran melena que protege su cuello en peleas. Cuanto más oscura es la melena, más sano es el león.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Sabanas y llanuras de África subsahariana (y una pequeña población en India). Prefieren pastizales abiertos con algo de sombra.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Las hembras son las que cazan en grupo, coordinándose para abatir presas grandes como ñus, cebras y búfalos.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Viven en manadas (prides) de hasta 40 individuos. Los machos defienden el territorio y duermen hasta 20 horas al día.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Cuando un nuevo macho conquista una manada, a menudo mata a los cachorros anteriores para que las hembras entren en celo nuevamente.</p>`,
+                'Carnívoro', 'Mamífero', '190 kg (Macho)', '1.7 - 2.5 m', 'Vulnerable', 'img/leon.avif',
+                'Sabana Africana', '10 - 14 años',
+                'Aunque se le llama El Rey de la Selva, en realidad vive en la sabana abierta. En la selva densa no podría cazar bien.'
             )">
                 <img src="img/leon.avif" alt="León">
                 <div class="animal-info">
                     <h3>León</h3>
-                    <p>El superdepredador</p>
+                    <p>El rey de la sabana</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
                 'Elefante Africano', 
-                'El animal terrestre más grande del mundo. Sus grandes orejas le ayudan a irradiar el exceso de calor.',
-                'Herbívoro', 'Mamífero', '6,000 kg', '3.3 m (Alto)', 'En Peligro',
-                'img/elefante.avif'
+                `<strong>Familia:</strong> Elephantidae<br>
+                 <strong>Trompa:</strong> Tiene más de 40,000 músculos.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El animal terrestre más grande. Sus enormes orejas actúan como radiadores para enfriar su sangre. Tienen colmillos de marfil (incisivos alargados).</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Desde sabanas abiertas hasta bosques densos en 37 países de África. Necesitan fuentes de agua cercanas.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Herbívoro masivo. Come hasta 150 kg de raíces, hierba, frutas y corteza al día. Derriban árboles para acceder a las hojas altas.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Viven en sociedades matriarcales complejas lideradas por la hembra más vieja y sabia. Tienen una memoria excelente y muestran duelo por sus muertos.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Tienen la gestación más larga de cualquier mamífero: 22 meses (casi 2 años). La cría pesa 100 kg al nacer.</p>`,
+                'Herbívoro', 'Mamífero', '6,000 kg', '3.3 m (Alto)', 'En Peligro', 'img/elefante.avif',
+                'Sabana y Bosques', '60 - 70 años',
+                'Son capaces de comunicarse a través de vibraciones en el suelo que detectan con sus patas (infrasonidos).'
             )">
-                <img src="img/elefante.avif" alt="Elefante Africano">
+                <img src="img/elefante.avif" alt="Elefante">
                 <div class="animal-info">
-                    <h3>Elefante Africano</h3>
-                    <p>El gigante gentil</p>
+                    <h3>Elefante</h3>
+                    <p>El arquitecto del ecosistema</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Jirafa', 
-                'El animal más alto del mundo. Su lengua de 50 cm es prensil y le permite comer hojas de acacias con espinas.',
-                'Herbívoro', 'Mamífero', '1,200 kg', '5.5 m (Alto)', 'Vulnerable',
-                'img/jirafa.avif'
+                'Jirafa (Giraffa camelopardalis)', 
+                `<strong>Familia:</strong> Giraffidae<br>
+                 <strong>Lengua:</strong> Mide hasta 50 cm y es de color azul/negro.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El animal más alto del mundo. A pesar de su cuello largo, tiene el mismo número de vértebras cervicales que un humano (7). Su corazón pesa 11 kg.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Sabanas arboladas de África. Necesitan acacias y árboles altos para alimentarse donde otros no llegan.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Ramoneadora. Su lengua prensil y labios duros le permiten comer hojas de acacia sin lastimarse con las espinas afiladas.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Duermen muy poco, a veces solo 30 minutos al día en siestas de 5 minutos, y a menudo lo hacen de pie para estar alertas.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Dan a luz de pie, por lo que la cría cae desde 2 metros de altura al nacer, lo que rompe el saco amniótico y la hace respirar.</p>`,
+                'Herbívoro', 'Mamífero', '800 - 1,200 kg', '5 - 6 m (Alto)', 'Vulnerable', 'img/jirafa.avif',
+                'Sabana Arbolada', '25 años',
+                'Cada jirafa tiene un patrón de manchas único. Además, las manchas ayudan a disipar calor a través de un sistema de vasos sanguíneos.'
             )">
                 <img src="img/jirafa.avif" alt="Jirafa">
                 <div class="animal-info">
                     <h3>Jirafa</h3>
-                    <p>La torre de la sabana</p>
+                    <p>La torre vigía</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Rinoceronte', 
-                'Famoso por sus cuernos de queratina. A pesar de su peso, puede correr sorprendentemente rápido y cambiar de dirección.',
-                'Herbívoro', 'Mamífero', '2,300 kg', '1.8 m (Alto)', 'En Peligro Crítico',
-                'img/rinoceronte.avif'
+                'Rinoceronte Blanco', 
+                `<strong>Familia:</strong> Rhinocerotidae<br>
+                 <strong>Cuerno:</strong> Hecho de queratina (como pelo o uñas).<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El segundo mamífero terrestre más grande. Tienen una piel gruesa tipo armadura pero sensible al sol y picaduras. Tienen mala vista pero excelente olfato.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Pastizales y sabanas del sur y este de África. A diferencia del rinoceronte negro, prefiere zonas llanas con hierba corta.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Herbívoro pastador. Tiene un labio ancho y cuadrado diseñado para segar grandes cantidades de hierba del suelo como una cortadora.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son territoriales y pueden cargar a 50 km/h si se sienten amenazados. Se revuelcan en lodo para proteger su piel.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Las hembras se reproducen cada 2-3 años. La cría camina delante de la madre para ser protegida (a diferencia del rino negro, que camina detrás).</p>`,
+                'Herbívoro', 'Mamífero', '2,300 kg', '1.8 m (Alto)', 'Casi Amenazado', 'img/rinoceronte.avif',
+                'Pastizales', '40 - 50 años',
+                'Su nombre Rinoceronte Blanco es un error de traducción del holandés wijd (ancho, por su boca), que los ingleses confundieron con white (blanco).'
             )">
                 <img src="img/rinoceronte.avif" alt="Rinoceronte">
                 <div class="animal-info">
                     <h3>Rinoceronte</h3>
-                    <p>El tanque blindado</p>
+                    <p>El tanque viviente</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Guepardo', 
-                'El animal terrestre más rápido, alcanzando 110 km/h en segundos. No puede rugir, pero ronronea como un gato.',
-                'Carnívoro', 'Mamífero', '50 kg', '90 cm (Alto)', 'Vulnerable',
-                'img/guepardo.avif'
+                'Guepardo / Chita (Acinonyx jubatus)', 
+                `<strong>Familia:</strong> Felidae<br>
+                 <strong>Velocidad:</strong> 0 a 100 km/h en 3 segundos.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Cuerpo aerodinámico, pecho profundo y cintura estrecha. Tiene líneas negras (lágrimas) bajo los ojos que absorben el sol para mejorar la visión.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Sabanas abiertas de África e Irán. Necesitan espacio para correr sin obstáculos.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro. Caza gacelas e impalas. Caza de día para evitar competir con leones y hienas. Se cansa rápido y debe comer velozmente.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Es el único felino con garras no retráctiles (como tacos de fútbol) para mayor tracción. No puede rugir, pero maúlla y ronronea.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>La hembra cría sola a una camada de 3 a 5 cachorros. Los bebés tienen un manto de pelo gris en la espalda para parecerse al tejón de la miel (agresivo) y disuadir depredadores.</p>`,
+                'Carnívoro', 'Mamífero', '35 - 65 kg', '1.1 - 1.5 m', 'Vulnerable', 'img/guepardo.avif',
+                'Llanuras Abiertas', '10 - 12 años',
+                'Es el animal terrestre más rápido del mundo, alcanzando velocidades punta de 120 km/h en carreras cortas.'
             )">
                 <img src="img/guepardo.avif" alt="Guepardo">
                 <div class="animal-info">
                     <h3>Guepardo</h3>
-                    <p>Velocidad pura</p>
+                    <p>La velocidad pura</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Avestruz', 
-                'El ave más grande y pesada. No vuela, pero corre a 70 km/h y sus patadas son defensas mortales.',
-                'Omnívoro', 'Ave', '110 kg', '2.8 m (Alto)', 'No',
-                'img/avestruz.avif'
+                'Avestruz (Struthio camelus)', 
+                `<strong>Familia:</strong> Struthionidae<br>
+                 <strong>Huevo:</strong> Pesa 1.5 kg (equivale a 24 huevos de gallina).<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El ave más grande y pesada. No puede volar, pero tiene patas musculosas letales. Tiene los ojos más grandes de cualquier animal terrestre (5 cm).</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Sabanas y zonas áridas de África. Prefieren espacios abiertos donde pueden ver el peligro desde lejos.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro. Come plantas, raíces y semillas, pero también insectos y lagartijas. Tragan piedras (gastrolitos) para ayudar a moler la comida en su estómago.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Corren a 70 km/h. Si se ven acorralados, lanzan una patada frontal capaz de matar a un león.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>El macho cava un nido en el suelo donde varias hembras ponen sus huevos. El macho y la hembra dominante se turnan para incubarlos.</p>`,
+                'Omnívoro', 'Ave', '100 - 150 kg', '2.1 - 2.8 m', 'Preocupación Menor', 'img/avestruz.avif',
+                'Sabana Árida', '40 - 45 años',
+                'Es un mito que esconden la cabeza en la arena. En realidad, bajan la cabeza a ras de suelo para parecer un arbusto a la distancia.'
             )">
                 <img src="img/avestruz.avif" alt="Avestruz">
                 <div class="animal-info">
                     <h3>Avestruz</h3>
-                    <p>El corredor emplumado</p>
+                    <p>El corredor gigante</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
                 'Cocodrilo del Nilo', 
-                'Un depredador prehistórico que acecha en los abrevaderos. Tiene la mordida más fuerte del reino animal.',
-                'Carnívoro', 'Reptil', '700 kg', '4.2 m (Largo)', 'No',
-                'img/cocodrilo.avif'
+                `<strong>Familia:</strong> Crocodylidae<br>
+                 <strong>Mordida:</strong> La más fuerte medida (3,700 psi).<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Reptil prehistórico acorazado con escamas duras. Sus mandíbulas no permiten masticar, solo agarrar y desgarrar mediante el giro de la muerte.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Ríos, lagos y pantanos de África subsahariana y la cuenca del Nilo.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro de emboscada. Come peces, cebras, búfalos y cualquier animal que se acerque a beber. Pueden pasar meses sin comer.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Pasan el día tomando el sol para regular su temperatura (ectotermos). Son sorprendentemente sociales y cuidan sus nidos ferozmente.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>La madre entierra los huevos en la arena. Cuando nacen, las crías la llaman y ella las desentierra y las lleva suavemente en su boca al agua.</p>`,
+                'Carnívoro', 'Reptil', '225 - 750 kg', '3.5 - 5.0 m', 'Preocupación Menor', 'img/cocodrilo.avif',
+                'Ríos y Lagos', '70 - 100 años',
+                'Tienen un corazón de cuatro cámaras muy avanzado (como las aves y mamíferos) que les permite bucear por largos periodos.'
             )">
-                <img src="img/cocodrilo.avif" alt="Cocodrilo del Nilo">
+                <img src="img/cocodrilo.avif" alt="Cocodrilo">
                 <div class="animal-info">
-                    <h3>Cocodrilo del Nilo</h3>
-                    <p>El terror del río</p>
+                    <h3>Cocodrilo</h3>
+                    <p>El depredador prehistórico</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Cebra', 
-                'Sus rayas son únicas como una huella dactilar. Viajan miles de kilómetros en la gran migración anual.',
-                'Herbívoro', 'Mamífero', '300 kg', '1.4 m (Alto)', 'Casi Amenazado',
-                'img/cebra.avif'
+                'Cebra de Llanura', 
+                `<strong>Familia:</strong> Equidae<br>
+                 <strong>Rayas:</strong> Funcionan como repelente de insectos.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Parecidas a los caballos pero con crines erectas. Sus rayas blancas y negras crean un efecto óptico (deslumbramiento de movimiento) que confunde a los depredadores al correr en grupo.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Pastizales y sabanas del este y sur de África. Realizan grandes migraciones anuales siguiendo las lluvias.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Herbívoro. Comen hierba dura y baja que otros animales rechazan. Tienen dientes muy fuertes.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Viven en harenes (un macho, varias hembras). Duermen de pie y siempre dejan un vigía despierto para alertar sobre leones o hienas.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Las crías (potros) nacen con rayas marrones y blancas. Pueden correr apenas una hora después de nacer.</p>`,
+                'Herbívoro', 'Mamífero', '300 - 400 kg', '1.3 m (Alto)', 'Casi Amenazado', 'img/cebra.avif',
+                'Llanuras Abiertas', '25 años',
+                'A pesar de parecerse a los caballos, nunca fueron domesticadas realmente debido a su carácter impredecible y su instinto de pánico.'
             )">
                 <img src="img/cebra.avif" alt="Cebra">
                 <div class="animal-info">
                     <h3>Cebra</h3>
-                    <p>Rayas en movimiento</p>
+                    <p>La viajera rayada</p>
                 </div>
             </div>
 
@@ -163,16 +286,24 @@
             
             <div class="modal-info-container">
                 <h2 id="m-nombre">Nombre Animal</h2>
-                <p id="m-desc" class="modal-description">Descripción...</p> 
                 
                 <div class="info-grid">
                     <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
                     <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
                     <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
                     <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                    <div class="data-row"><span class="data-label">Hábitat:</span> <span id="m-habitat">...</span></div>
+                    <div class="data-row"><span class="data-label">Vida:</span> <span id="m-vida">...</span></div>
                 </div>
 
-                <div id="m-peligro" class="danger-status">⚠️ En Peligro de Extinción</div>
+                <div id="m-desc" class="modal-description"></div> 
+
+                <div class="fun-fact-box">
+                    <strong>💡 ¿Sabías que?</strong>
+                    <p id="m-dato">...</p>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro</div>
             </div>
         </div>
     </div>

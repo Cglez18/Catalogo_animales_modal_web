@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selva Tropical | ZooMundo</title>
+    <title>Bosque Tropical | ZooMundo</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    
 </head>
 <body>
 
-    <nav class="navbar" style="position: relative; background: var(--bg-dark);">
+    <nav class="navbar">
         <div class="logo">ZooMundo</div>
         <ul class="nav-links">
             <li><a href="index.html">← Volver al Inicio</a></li>
         </ul>
     </nav>
 
-    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/selva.avif');">
+    <header class="biome-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img/selva.avif');">
         <div class="header-content">
-            <h1>Selva Tropical</h1>
-            <p>El pulmón del planeta, hogar de la mayor biodiversidad y colores vibrantes.</p>
+            <h1>La Selva</h1>
+            <p>El reino verde donde la vida compite en cada rama.</p>
         </div>
     </header>
 
@@ -29,82 +28,182 @@
         <div class="animal-grid">
             
             <div class="animal-card" onclick="openModal(
-                'Jaguar', 
-                'El gran felino de América. Excelente nadador y cazador sigiloso. Su mordida es considerada la más fuerte de todos los felinos.',
-                'Carnívoro', 'Mamífero', '90 kg', '1.7 m (Largo)', 'Casi Amenazado',
-                'img/jaguar.avif'
+                'Jaguar (Panthera onca)', 
+                `<strong>Familia:</strong> Felidae<br>
+                 <strong>Mordida:</strong> La más fuerte de todos los felinos.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Es el felino más grande de América. Sus manchas (rosetas) tienen puntos negros dentro, a diferencia del leopardo. Son robustos y musculosos.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Desde México hasta el norte de Argentina. Prefieren selvas densas, pantanos y zonas cercanas a ríos.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívoro oportunista. Su mandíbula perfora caparazones de tortuga y cráneos de caimanes. No temen al agua.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Solitario y territorial. Es un excelente nadador y trepador. Caza emboscando desde arriba o lanzándose al agua.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>La hembra cría sola a los cachorros (generalmente 2) hasta que pueden reclamar su propio territorio a los dos años.</p>`,
+                'Carnívoro', 'Mamífero', '56 - 96 kg', '1.1 - 1.8 m', 'Casi Amenazado', 'img/jaguar.avif',
+                'Selvas Neotropicales', '12 - 15 años',
+                'Su nombre viene del guaraní Yaguareté, que significa La verdadera fiera que mata de un salto.'
             )">
                 <img src="img/jaguar.avif" alt="Jaguar">
                 <div class="animal-info">
                     <h3>Jaguar</h3>
-                    <p>El fantasma de la selva</p>
+                    <p>El rey de América</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Gorila', 
-                'El primate más grande del mundo. Viven en grupos familiares pacíficos liderados por un macho espalda plateada.',
-                'Herbívoro', 'Mamífero', '180 kg', '1.7 m (Alto)', 'En Peligro Crítico',
-                'img/gorila.avif'
+                'Tigre (Panthera tigris)', 
+                `<strong>Familia:</strong> Felidae<br>
+                 <strong>Salto:</strong> Puede saltar 5 metros de altura.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>El felino más grande del mundo. Sus rayas negras son únicas como una huella dactilar y están pintadas en su piel, no solo en el pelo.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Selvas de Asia (India, Sumatra, Malasia). Necesitan grandes territorios con agua y presas abundantes.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Superdepredador. Caza ciervos sambar, jabalíes y búfalos. Puede comer hasta 40 kg de carne en una sola noche.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>A diferencia de los leones, es solitario y ama el agua. Puede nadar kilómetros para cruzar ríos o refrescarse.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Los cachorros nacen ciegos. La madre los protege ferozmente de machos intrusos y otros depredadores.</p>`,
+                'Carnívoro', 'Mamífero', '90 - 300 kg', '2.5 - 3.9 m', 'En Peligro', 'img/tigre.avif',
+                'Selvas Asiáticas', '15 - 20 años',
+                'El rugido de un tigre es tan potente que puede paralizar momentáneamente a sus presas (y a humanos) debido a sus bajas frecuencias.'
+            )">
+                <img src="img/tigre.avif" alt="Tigre">
+                <div class="animal-info">
+                    <h3>Tigre</h3>
+                    <p>El depredador rayado</p>
+                </div>
+            </div>
+
+            <div class="animal-card" onclick="openModal(
+                'Gorila de Montaña', 
+                `<strong>Familia:</strong> Hominidae<br>
+                 <strong>Fuerza:</strong> Puede levantar hasta 800 kg.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Es el primate más grande. Los machos adultos desarrollan pelo plateado en la espalda (Espalda Plateada) y una cresta ósea en la cabeza.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Bosques nubosos y selvas de montaña en África Central (Ruanda, Uganda, Congo).</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Herbívoro masivo. Pasa la mitad del día comiendo tallos, bambú, frutas y raíces para mantener su enorme cuerpo.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Viven en grupos estables liderados por un macho dominante. Son generalmente pacíficos y tímidos, a menos que se les provoque.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Las madres llevan a sus bebés en brazos o espalda durante 3-4 años. Tienen una tasa de reproducción muy lenta.</p>`,
+                'Herbívoro', 'Mamífero', '135 - 195 kg', '1.5 - 1.8 m', 'En Peligro', 'img/gorila.avif',
+                'Selvas Africanas', '35 - 40 años',
+                'Hacen camas nuevas cada noche doblando ramas y hojas en el suelo o árboles bajos para dormir cómodos.'
             )">
                 <img src="img/gorila.avif" alt="Gorila">
                 <div class="animal-info">
                     <h3>Gorila</h3>
-                    <p>El gigante noble</p>
-                </div>
-            </div>
-
-            
-
-            <div class="animal-card" onclick="openModal(
-                'Anaconda Verde', 
-                'La serpiente más pesada del mundo. Es una constrictora acuática que acecha pacientemente en los ríos amazónicos.',
-                'Carnívoro', 'Reptil', '200 kg', '5.0 m (Largo)', 'No',
-                'img/anaconda.avif'
-            )">
-                <img src="img/anaconda.avif" alt="Anaconda">
-                <div class="animal-info">
-                    <h3>Anaconda</h3>
-                    <p>La reina del río</p>
+                    <p>El gigante gentil</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Chimpancé', 
-                'Nuestros parientes vivos más cercanos. Usan herramientas complejas y tienen una vida social muy rica y jerárquica.',
-                'Omnívoro', 'Mamífero', '50 kg', '1.2 m (Alto)', 'En Peligro',
-                'img/chimpance.avif'
+                'Chimpancé (Pan troglodytes)', 
+                `<strong>Familia:</strong> Hominidae<br>
+                 <strong>ADN:</strong> Compartimos el 98.8% de genética.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Brazos más largos que sus piernas para trepar. Tienen pulgares oponibles en manos y pies para agarrar objetos con precisión.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Selvas tropicales y sabanas húmedas de África Central y Occidental. Pasan tiempo tanto en el suelo como en los árboles.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Omnívoro. Comen principalmente frutas y hojas, pero también cazan en grupo monos pequeños, antílopes e insectos.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Usan herramientas: palos para pescar termitas y piedras para romper nueces. Tienen complejas guerras territoriales.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Los lazos madre-hijo son de por vida. Las crías dependen de su madre para transporte y alimento hasta los 5 años.</p>`,
+                'Omnívoro', 'Mamífero', '40 - 60 kg', '1.2 - 1.7 m', 'En Peligro', 'img/chimpance.avif',
+                'Selvas Africanas', '40 - 50 años',
+                'Son capaces de reconocerse en un espejo y pueden aprender lenguaje de señas básico en cautiverio.'
             )">
                 <img src="img/chimpance.avif" alt="Chimpancé">
                 <div class="animal-info">
                     <h3>Chimpancé</h3>
-                    <p>Inteligencia social</p>
+                    <p>El pariente más cercano</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Orangután', 
-                'Es el único gran simio de Asia, conocido por su pelaje rojizo y vida arborícola solitaria.',
-                'Frugívoro', 'Mamífero', '75 kg', '1.4 m (Alto)', 'En Peligro Crítico',
-                'img/orangutan.avif'
+                'Orangután (Pongo)', 
+                `<strong>Familia:</strong> Hominidae<br>
+                 <strong>Vida:</strong> El animal arborícola más grande.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Pelaje largo y rojizo. Sus brazos son tan largos que tocan el suelo al estar de pie (envergadura de 2 metros).</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Exclusivos de las islas de Borneo y Sumatra. Rara vez bajan al suelo para evitar a los tigres.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Frugívoros. Conocen el ciclo de maduración de cientos de frutas. Tienen un papel vital dispersando semillas.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Son los simios más solitarios. Se mueven lentamente por las copas de los árboles balanceándose con gran cautela.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Tienen el periodo de lactancia e infancia más largo del mundo animal (8 años). Una hembra solo tiene 3 o 4 crías en toda su vida.</p>`,
+                'Frugívoro', 'Mamífero', '50 - 90 kg', '1.2 - 1.5 m', 'En Peligro Crítico', 'img/orangutan.avif',
+                'Selvas de Borneo', '30 - 45 años',
+                'Su nombre significa Persona del Bosque. Usan hojas grandes como paraguas cuando llueve fuerte.'
             )">
                 <img src="img/orangutan.avif" alt="Orangután">
                 <div class="animal-info">
                     <h3>Orangután</h3>
-                    <p>El sabio del bosque</p>
+                    <p>El sabio pelirrojo</p>
                 </div>
             </div>
 
             <div class="animal-card" onclick="openModal(
-                'Tigre de Bengala', 
-                'El felino más grande del mundo. Sus rayas únicas le sirven de camuflaje entre la vegetación densa para emboscar presas.',
-                'Carnívoro', 'Mamífero', '220 kg', '3.0 m (Largo)', 'En Peligro',
-                'img/tigre.avif'
+                'Anaconda Verde (Eunectes murinus)', 
+                `<strong>Familia:</strong> Boidae (Boas)<br>
+                 <strong>Peso:</strong> La serpiente más pesada del mundo.<br><br>
+                 
+                 <h3>1. Características Físicas</h3>
+                 <p>Cuerpo grueso y musculoso de color verde oliva con manchas negras. Sus ojos y nariz están arriba de la cabeza para ver mientras nada.</p>
+                 
+                 <h3>2. Hábitat y Distribución</h3>
+                 <p>Cuencas del Amazonas y Orinoco. Viven en pantanos, ríos lentos y marismas. Son lentas en tierra pero rápidas en el agua.</p>
+                 
+                 <h3>3. Alimentación</h3>
+                 <p>Carnívora constrictora. Mata por asfixia. Come capibaras, caimanes, ciervos y a veces jaguares.</p>
+                 
+                 <h3>4. Comportamiento</h3>
+                 <p>Solitaria. Pasa gran parte del tiempo sumergida acechando. Puede desencajar su mandíbula para tragar presas más grandes que su cabeza.</p>
+                 
+                 <h3>5. Reproducción</h3>
+                 <p>Es ovovivípara. No pone huevos, sino que da a luz a 20-40 crías vivas en el agua, que son independientes desde el primer día.</p>`,
+                'Carnívoro', 'Reptil', 'Hasta 250 kg', '6 - 9 metros', 'Preocupación Menor', 'img/anaconda.avif',
+                'Ríos Amazónicos', '10 - 30 años',
+                'Las hembras son mucho más grandes que los machos (dimorfismo sexual extremo) y a veces se comen al macho tras aparearse.'
             )">
-                <img src="img/tigre.avif" alt="Tigre de Bengala">
+                <img src="img/anaconda.avif" alt="Anaconda">
                 <div class="animal-info">
-                    <h3>Tigre de Bengala</h3>
-                    <p>El depredador rayado</p>
+                    <h3>Anaconda</h3>
+                    <p>La gigante del río</p>
                 </div>
             </div>
 
@@ -113,7 +212,7 @@
 
     <footer>
         <div class="container footer-content">
-            <p>&copy; 2025 ZooMundo - Sección Selva</p>
+            <p>&copy; 2025 ZooMundo - Sección Bosque Tropical</p>
         </div>
     </footer>
 
@@ -127,16 +226,24 @@
             
             <div class="modal-info-container">
                 <h2 id="m-nombre">Nombre Animal</h2>
-                <p id="m-desc" class="modal-description">Descripción...</p> 
                 
                 <div class="info-grid">
                     <div class="data-row"><span class="data-label">Dieta:</span> <span id="m-dieta">...</span></div>
                     <div class="data-row"><span class="data-label">Tipo:</span> <span id="m-tipo">...</span></div>
                     <div class="data-row"><span class="data-label">Peso:</span> <span id="m-peso">...</span></div>
                     <div class="data-row"><span class="data-label">Medidas:</span> <span id="m-medidas">...</span></div>
+                    <div class="data-row"><span class="data-label">Hábitat:</span> <span id="m-habitat">...</span></div>
+                    <div class="data-row"><span class="data-label">Vida:</span> <span id="m-vida">...</span></div>
                 </div>
 
-                <div id="m-peligro" class="danger-status">⚠️ En Peligro de Extinción</div>
+                <div id="m-desc" class="modal-description"></div> 
+
+                <div class="fun-fact-box">
+                    <strong>💡 ¿Sabías que?</strong>
+                    <p id="m-dato">...</p>
+                </div>
+
+                <div id="m-peligro" class="danger-status">En Peligro</div>
             </div>
         </div>
     </div>
