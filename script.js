@@ -1,17 +1,17 @@
 function openModal(nombre, desc, dieta, tipo, peso, medidas, peligro, imagen, habitat, vida, dato) {
     const modal = document.getElementById("animalModal");
     
-    // 1. Mostrar Modal
+    //Mostrar Modal
     modal.style.display = "flex";
 
-    // 2. Inyectar Textos Básicos
+    //Inyectar Textos Básicos
     document.getElementById("m-nombre").innerText = nombre;
     document.getElementById("m-imagen").src = imagen;
 
-    // 3. Inyectar HTML Complejo (Descripción Larga)
+    //Inyectar HTML Complejo (Descripción Larga)
     document.getElementById("m-desc").innerHTML = desc;
 
-    // 4. Inyectar Datos Técnicos
+    //Inyectar Datos Técnicos
     document.getElementById("m-dieta").innerText = dieta;
     document.getElementById("m-tipo").innerText = tipo;
     document.getElementById("m-peso").innerText = peso;
@@ -19,24 +19,41 @@ function openModal(nombre, desc, dieta, tipo, peso, medidas, peligro, imagen, ha
     document.getElementById("m-habitat").innerText = habitat;
     document.getElementById("m-vida").innerText = vida;
     
-    // 5. Dato Curioso
+    //Dato Curioso
     document.getElementById("m-dato").innerText = dato;
 
-    // 6. Estado de Conservación
+    //Estado de Conservación
     const peligroDiv = document.getElementById("m-peligro");
-    if (!peligro || peligro === "No" || peligro === "Preocupación Menor") {
+
+    if (!peligro || peligro === "No") {
         peligroDiv.style.display = "none";
     } else {
         peligroDiv.style.display = "inline-block";
-        peligroDiv.innerText = peligro; 
-        
-        // Cambiar color según gravedad
-        if(peligro.includes("Vulnerable")) {
-            peligroDiv.style.background = "#f39c12"; // Naranja
-        } else if(peligro.includes("Crítico")) {
-            peligroDiv.style.background = "#8e44ad"; // Morado
+        peligroDiv.innerText = peligro;
+    
+        const p = peligro.toLowerCase();
+
+        peligroDiv.style.color = "#fff"; 
+
+        if (p.includes("en peligro crítico") || p.includes("en peligro Critico")) {
+            peligroDiv.style.background = "#641E16"; 
+            
+        } else if (p.includes("en peligro")) {
+            peligroDiv.style.background = "#c0392b"; 
+            
+        } else if (p.includes("vulnerable")) {
+            peligroDiv.style.background = "#e67e22"; 
+            
+        } else if (p.includes("casi amenazada") || p.includes("casi amenazado")) {
+            peligroDiv.style.background = "#f1c40f"; 
+            peligroDiv.style.color = "#333";
+            
+        } else if (p.includes("preocupación menor")) {
+            peligroDiv.style.background = "#27ae60"; 
+            
         } else {
-            peligroDiv.style.background = "#c0392b"; // Rojo
+            // Otros casos
+            peligroDiv.style.background = "#7f8c8d";
         }
     }
 }
